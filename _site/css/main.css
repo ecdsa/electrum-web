@@ -1,0 +1,11 @@
+/* line 1, _sass/main.sass */
+body {
+  margin: 0;
+}
+
+/* line 3, _sass/main.sass */
+header {
+  height: 60px;
+  border-bottom: 1px solid #ededed;
+  background: #f2f2f2;
+}
