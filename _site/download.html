@@ -1,0 +1,88 @@
+<html>
+  <head>
+    <!--<link rel="stylesheet" type="text/css" href="http://s3.ecdsa.org/style.css" />-->
+    <link rel="stylesheet" type="text/css" href="./css/screen.css" />
+    <link rel="shortcut icon" href="http://s3.ecdsa.org/favicon.ico" />
+    <title>Electrum Bitcoin Client</title>
+  </head>
+<body>
+  <header>
+    <div class="container">
+      <h1>Electrum</h1> 
+      <h2>The user friendly bitcoin client</h2>
+    </div>
+    <nav class="right">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="download.html">Download</a></li>
+        <li>Developers</li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="container"> 
+    <h3>Download</h3>
+<h4>Stable release</h4>
+<table>
+  <tr>
+    <td><img src="./media/os_linux.gif"/>Linux</td>
+    <td>In a terminal, type:<br/>
+      <tt>sudo pip install http://ecdsa.org/electrum/Electrum-0.61.tar.gz#md5=7558788035c78718a8a08aab9dac9f54</tt><br/>
+      Then, to start Electrum, type <tt>electrum</tt></td>
+  </tr>
+  <tr>
+    <td><img src="./media/os_windows.gif"/>Windows</td>
+    <td> <a href="http://dre.redmartian.org/elecwin.htm">Executable for Win XP & 7</a> (created by flatfly)</td>
+  </tr>
+  <tr>
+    <td><img src="./media/android_icon.png" width=30/>Android</td>
+    <td>
+      <a href="android.html">Installation from QR codes</a>
+    </td>
+  </tr>
+</table>
+
+<h4>Building from source</h4>
+<p>Dependencies</p>
+<ul>
+  <li>Python</li>
+  <li>qt</li>
+  <li>pyqt</li>
+  <li>gettext</li>
+  <li>ecdsa</li>
+  <li>slowaes</li>
+</ul>
+<p>On Ubuntu you can install the deps with.</p>
+<pre>
+sudo apt-get install python-pip python-qt4 pyqt4-dev-tools
+sudo pip install ecdsa slowaes
+</pre>
+<p>Check out the code from Github</p>
+<pre>
+  git clone git://github.com/spesmilo/electrum.git
+</pre>
+<p>Compile the icons</p>
+<pre>
+  pyrcc4 icons.qrc -o lib/icons_rc.py
+</pre>
+<p>Create translations</p>
+<pre>
+  python mki18n.py
+</pre>
+<p>Install Electrum</p>
+<pre>
+sudo python setup.py install
+electrum
+</pre>
+
+<h4>Source on Windows</h4>
+<ul>
+  <li>Install <a href= "http://www.riverbankcomputing.co.uk/software/pyqt/download">PyQt4</a> </li>
+  <li>Install <a href="http://ecdsa.org/electrum/Electrum-0.61.zip">Electrum-0.61.zip</a> </li>
+  <li>execute 'python electrum'</li>
+</ul>
+
+  </div>
+</body>
+</html>
+

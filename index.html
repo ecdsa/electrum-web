@@ -3,17 +3,23 @@ layout: default
 section: default
 ---
 
-<h3>Electrum in a nutshell</h3>
-<p>
+<div class="opening">
+  <h3>Electrum in a nutshell</h3>
+  <p class="left description">
   Electrum is a lightweight client that was designed to simplify the use
-  of Bitcoin. You do not need to perform regular backups, because your
+  of Bitcoin. You do not need to perform regular wallet backups, because your
   wallet can be recovered from a secret phrase that you can memorize or
   write on paper. There is no waiting time when you start the client,
   because it does not download the Bitcoin blockchain; instead, the
-  client relies on remote servers. 
-</p>
+  client relies on remote servers. Everybody can run his or hers own electrum server this 
+  keeps the client decentralized.  
+  </p>
+  <div class="left image"> 
+    <img src="./media/litegui.png" />
+  </div>
+</div>
 
-<h3>Features:</h3>
+<h3>Features</h3>
 <ul>
   <li>Encrypted: your private keys are protected with a password. You are protected from thieves.</li>
   <li>Deterministic: If you lose your wallet, you can recover it from its <a href="seed.html">seed</a>. You are protected from your own mistakes.</li>
@@ -27,61 +33,16 @@ section: default
   <li>Free software: Gnu GPL v3. Anyone can audit the code. Anyone can run a server.</li>
 </ul>
 
-<h3>Download</h3>
-
-<table border="1" style="border-width:1px;">
-  <tr>
-    <td><img src="./media/os_linux.gif"/>Linux</td>
-    <td>In a terminal, type:<br/>
-      <tt>sudo pip install http://ecdsa.org/electrum/Electrum-0.61.tar.gz#md5=7558788035c78718a8a08aab9dac9f54</tt><br/>
-      Then, to start Electrum, type <tt>electrum</tt></td>
-  </tr>
-  <tr>
-    <td><img src="./media/os_windows.gif"/>Windows</td>
-    <td> <a href="http://dre.redmartian.org/elecwin.htm">Executable for Win XP & 7</a> (created by flatfly)</td>
-  </tr>
-  <tr>
-    <td><img src="./media/android_icon.png" width=30/>Android</td>
-    <td>
-      <a href="android.html">Installation from QR codes</a>
-    </td>
-  </tr>
-</table>
-
 <h3>Screenshot</h3>
-<img src="http://ecdsa.org/electrum_qt.png"/><br/>
-
-
+<img src="http://ecdsa.org/electrum_qt.png"/>
+<br/><br/>
 <h3>Community</h3>
 <ul>
-  <li>Discussion, bug reports and support: <a href="https://bitcointalk.org/index.php?topic=50936.0">Electrum thread in the Bitcoin forum</a></li>
+  <li>Github: <a href="https://github.com/spesmilo/electrum/">https://github.com/spesmilo/electrum/</a></li>
+  <li>Discussion: <a href="https://bitcointalk.org/index.php?topic=50936.0">Electrum thread in the Bitcoin forum</a></li>
   <li>IRC channel: join the <a href="irc://irc.freenode.net/electrum">#electrum</a> channel on Freenode</li>
   <li>Documentation: <a href="https://en.bitcoin.it/wiki/Electrum">https://en.bitcoin.it/wiki/Electrum</a></li>
   <li>Localization: <a href="https://en.bitcoin.it/wiki/Electrum/Translation">https://en.bitcoin.it/wiki/Electrum/Translation</a></li>
-</ul>
-
-<h3>Resources for developers</h3>
-<ul>
-  <li>The project is hosted at <a href="https://github.com/Spesmilo/Electrum">Github</a></li>
-  <li>Tar archive: <a href="http://ecdsa.org/electrum/Electrum-0.61.tar.gz">Electrum-0.61.tar.gz</a></li>
-  <li>Installation from gitorious (Linux): 
-<pre>
-sudo apt-get install python-pip python-qt4 pyqt4-dev-tools
-sudo pip install ecdsa slowaes
-git clone git://github.com/Spesmilo/Electrum.git
-cd electrum
-pyrcc4 icons.qrc -o lib/icons_rc.py
-python mki18n.py
-sudo python setup.py install
-electrum
-</pre>
-  <li>Source installation on Windows:
-  <ul>
-    <li>Install <a href= "http://www.riverbankcomputing.co.uk/software/pyqt/download">PyQt4</a> </li>
-    <li>Install <a href="http://ecdsa.org/electrum/Electrum-0.61.zip">Electrum-0.61.zip</a> </li>
-    <li>execute 'python electrum'</li>
-    </li>
-  </ul>
 </ul>
 </div>
 

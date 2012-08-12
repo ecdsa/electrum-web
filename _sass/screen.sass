@@ -5,19 +5,42 @@
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" />
 
 @import compass/reset
+@import compass/css3
 @import "blueprint/typography"
 
 +blueprint-typography
 body
   margin: 0
+  font-size: 12pt
+pre
+  border: 1px solid rgba(0, 0, 0, 0.15)
+  background: whiteSmoke
+  padding: 8.5px
+table
+  border: 1px solid #DDD
+  border-collapse: separate
+td
+  border-top: 1px solid #DDD 
+  border-left: 1px solid #DDD
 
+.opening
+  overflow: hidden
+  margin-top: 20px
+.left
+  float: left
+.image
+  width: 300px
+  margin-top: -50px
+.description
+  width: 500px
+  
 header
   height: 35px
   border-bottom: 1px solid #EDEDED
   background: #F2F2F2
   padding: 15px
   overflow: hidden
-  margin-bottom: 10px
+  margin-bottom: 20px
   nav
     float: right
     margin-right: 200px
@@ -29,18 +52,23 @@ header
     li
       float: left
       font-weight: bold
-      margin-right: 10px
+      margin-right: 15px
       font-size: 11pt
+      color: #3484E6
   h1
+    font-size: 25pt
     margin-bottom: 0px
     color: #515255
     float: left
+    @include text-shadow(0 1px #CCC)
   h2
     color: #ACB3BA
     float: left
     font-size: 12pt
     padding-top: 9px
     margin-left: 10px
+h3
+  @include text-shadow(0 1px #CCC)
 
 .container
   width: 960px
