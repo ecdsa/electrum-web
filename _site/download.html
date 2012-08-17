@@ -26,6 +26,16 @@
 <h4>Stable release</h4>
 <table>
   <tr>
+    <td><img src="./media/os_ubuntu.gif">Ubuntu</td>
+    <td>Add this to your /etc/apt/sources.list:<br />
+      <tt>deb http://apt.bitcoins.sk/ precise main</tt><br />
+    Add the key to apt:<br />
+      <tt>wget -O - http://apt.bitcoins.sk/deafboy@bitcoins.sk.pub | sudo apt-key add -</tt><br />
+    Install Electrum:<br />
+      <tt>sudo apt-get update</tt><br />
+      <tt>sudo apt-get install electrum</tt>
+  </tr>
+  <tr>
     <td><img src="./media/os_linux.gif"/>Linux</td>
     <td>In a terminal, type:<br/>
       <tt>sudo pip install https://github.com/spesmilo/electrum/tarball/1.0\#md5\=863e61b215bf2e3fee243ce9583f677f</tt><br/>
