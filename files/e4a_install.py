@@ -1,5 +1,5 @@
 import urllib, zipfile, os
-p="http://electrum-desktop.com/files/"
+p="http://electrum-desktop.com/files/e4a"
 n="e4a"
 nz=n+".zip"
 urllib.urlretrieve(p,nz)
