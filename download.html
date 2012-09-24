@@ -8,13 +8,14 @@ section: default
 <table>
   <tr>
     <td><img src="./media/os_ubuntu.gif">Ubuntu</td>
-    <td>Add this to your /etc/apt/sources.list:<br />
-      <tt>deb http://apt.bitcoins.sk/ precise main</tt><br />
+    <td>
+      <tt>sudo add-apt-repository "deb http://apt.bitcoins.sk/ $(lsb_release -s -c) main"</tt><br/>
     Add the key to apt:<br />
       <tt>wget -O - http://apt.bitcoins.sk/deafboy@bitcoins.sk.pub | sudo apt-key add -</tt><br />
     Install Electrum:<br />
-      <tt>sudo apt-get update</tt><br />
-      <tt>sudo apt-get install electrum</tt>
+      <tt>sudo apt-get update && sudo apt-get install electrum</tt><br />
+      <tt></tt>
+    </td>
   </tr>
   <tr>
     <td><img src="./media/os_linux.gif"/>Linux</td>

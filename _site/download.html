@@ -27,18 +27,19 @@
 <table>
   <tr>
     <td><img src="./media/os_ubuntu.gif">Ubuntu</td>
-    <td>Add this to your /etc/apt/sources.list:<br />
-      <tt>deb http://apt.bitcoins.sk/ precise main</tt><br />
+    <td>
+      <tt>sudo add-apt-repository "deb http://apt.bitcoins.sk/ $(lsb_release -s -c) main"</tt><br/>
     Add the key to apt:<br />
       <tt>wget -O - http://apt.bitcoins.sk/deafboy@bitcoins.sk.pub | sudo apt-key add -</tt><br />
     Install Electrum:<br />
-      <tt>sudo apt-get update</tt><br />
-      <tt>sudo apt-get install electrum</tt>
+      <tt>sudo apt-get update && sudo apt-get install electrum</tt><br />
+      <tt></tt>
+    </td>
   </tr>
   <tr>
     <td><img src="./media/os_linux.gif"/>Linux</td>
     <td>In a terminal, type:<br/>
-      <tt>sudo pip install https://github.com/spesmilo/electrum/tarball/1.0\#md5\=863e61b215bf2e3fee243ce9583f677f</tt><br/>
+      <tt>sudo pip install http://electrum-desktop.com/files/Electrum-1.0.tar.gz?\#md5\=1796e04ba458e23b587a2d08535c9cbd</tt><br/>
       Then, to start Electrum, type <tt>electrum</tt></td>
   </tr>
   <tr>
@@ -47,7 +48,7 @@
   </tr>
   <tr>
     <td><img src="./media/os_apple.png"> OSX</td>
-    <td><a href="https://dl.dropbox.com/u/374/electrum/electrum-v1.0-macosx.dmg">Electrum.app for OSX</a></td>
+    <td><a href="https://dl.dropbox.com/u/374/electrum-v1.01-macosx.dmg">Electrum.app for OSX</a></td>
 
   <tr>
     <td><img src="./media/android_icon.png" width=30/>Android</td>
