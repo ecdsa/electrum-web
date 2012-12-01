@@ -1,63 +1,125 @@
----
-layout: default
-section: default
----
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="css/screen.css" />
+    <link rel="shortcut icon" href="favicon.ico" />
+    <title>Electrum Bitcoin Client</title>
+</head>
+<body style="background-color:#dddddd;">
 
-<h3>Download</h3>
-<h4>Stable release</h4>
-<table>
+
+<header>
+    <div class="container">
+      <nav class="right">
+	<ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="download.html">Download</a></li>
+          <li><a href="community.html">Community</a></li>
+	</ul>
+      </nav>
+
+      <div style="width:380">
+	<div style="float:left;">
+	  <img src="data/electrum_text2.png" alt="Electrum" width="300"/>
+	  <h2>Lightweight Bitcoin Client</h2>
+	</div>
+	<div style="float:right">
+	  <img src="data/electrum_logo.svg" alt="Electrum" border="none" width="70" align="top"/>
+	</div>
+      </div>
+
+    </div>
+</header>
+
+<div class="container">
+
+  <h3>Latest release: Electrum-1.5.3</h3>
+
+  <table style="background-color:#f2f2f2;">
   <tr>
-    <td><img src="./media/os_ubuntu.gif">Ubuntu</td>
+    <td><img src="data/tar-gz.png" width=32/>Sources</td>
     <td>
-      <tt>sudo add-apt-repository "deb http://apt.bitcoins.sk/ precise main"</tt><br/>
-    Add the key to apt:<br />
-      <tt>wget -O - http://apt.bitcoins.sk/deafboy@bitcoins.sk.pub | sudo apt-key add -</tt><br />
-    Install Electrum:<br />
-      <tt>sudo apt-get update && sudo apt-get install electrum</tt><br />
-      <tt></tt>
+      <a href="Electrum-1.5.3.tar.gz">Electrum-1.5.3.tar.gz</a> 
+      or <a href="Electrum-1.5.3.tar.gz">Electrum-1.5.3.zip</a><br/>
     </td>
   </tr>
   <tr>
-    <td><img src="./media/os_linux.gif"/>Linux</td>
-    <td>In a terminal, type:<br/>
-      <tt>sudo pip install http://electrum-desktop.com/files/Electrum-1.0.tar.gz?\#md5\=1796e04ba458e23b587a2d08535c9cbd</tt><br/>
-      Then, to start Electrum, type <tt>electrum</tt></td>
+    <td><img src="data/os_linux.gif"/>Linux</td>
+    <td>
+      <ul>
+	<li>Install python-qt4 and pip:<br/><tt>sudo apt-get install python-qt4 python-pip</tt></li>
+	<li>Install electrum:<br/><tt>sudo pip install http://electrum.ecdsa.org/Electrum-1.5.3.tar.gz</tt></li>
+	<li>Run:<br/><tt>electrum</tt></li>
+      </ul>
+    </td>
   </tr>
   <tr>
-    <td><img src="./media/os_windows.gif"/>Windows</td>
-    <td> <a href="http://dre.redmartian.org/elecwin.htm">Executable for Win XP & 7</a> (created by flatfly)</td>
+    <td><img src="data/os_windows.gif"/>Windows</td>
+    <td>
+      <li>Install <a href="http://www.riverbankcomputing.co.uk/software/pyqt/download">PyQt4</a> </li>
+      <li>Install <a href="Electrum-1.5.3.zip">Electrum-1.5.3.zip</a> </li>
+      <li>execute 'python electrum'</li>
+    </td>
   </tr>
   <tr>
-    <td><img src="./media/os_apple.png"> OSX</td>
-    <td><a href="https://dl.dropbox.com/u/374/electrum-v1.01-macosx.dmg">Electrum.app for OSX</a></td>
-
+    <td><img src="data/os_apple.png"> OSX<br/></td>
+    <td>
+      <li>Install <a href="http://mxcl.github.com/homebrew/">Homebrew</a>.</li>
+      <li>Install dependencies <tt>brew install qt pyqt</tt>.</li>
+      <li>Install <a href="Electrum-1.5.3.zip">Electrum-1.5.3.zip</a> </li>
+      <li>execute 'python electrum'</li>
+    </td>
+  </tr>
   <tr>
-    <td><img src="./media/android_icon.png" width=30/>Android</td>
+    <td><img src="data/android_icon.png" width=30/>Android</td>
     <td>
       <a href="android.html">Installation from QR codes</a>
     </td>
   </tr>
+  </table>
+
+  <h3>Older releases</h3>
+
+  <table style="background-color:#f2f2f2;">
+  <tr>
+    <td><img src="data/os_ubuntu.gif">Ubuntu<br/>(version 1.0)</td>
+    <td>
+      <ul>
+	<li>Add a new repository:<br/> <tt>sudo add-apt-repository "deb http://apt.bitcoins.sk/ precise main"</tt></li>
+	<li>Add the repo key to apt:<br/> <tt>wget -O - http://apt.bitcoins.sk/deafboy@bitcoins.sk.pub | sudo apt-key add -</tt></li>
+	<li>Update index:<br/> <tt>sudo apt-get update</tt></li>
+	<li>Install Electrum:<br/> <tt>sudo apt-get install electrum</tt></li>
+	</ul>
+    </td>
+  </tr>
+  <tr>
+    <td><img src="data/os_windows.gif"/>Windows<br/>(version 1.1)</td>
+    <td> <a href="http://dre.redmartian.org/elecwin.htm">Executable for Win XP & 7</a> (created by flatfly)</td>
+  </tr>
+  <tr>
+    <td><img src="data/os_apple.png"> OSX<br/>(version 1.0)</td>
+    <td><a href="https://dl.dropbox.com/u/374/electrum-v1.01-macosx.dmg">Electrum.app
+    for OSX</a></td>
+  </tr>  
 </table>
 
-<h4>Building from source</h4>
-<p>Dependencies</p>
-<ul>
-  <li>Python</li>
-  <li>qt</li>
-  <li>pyqt</li>
-  <li>gettext</li>
-  <li>ecdsa</li>
-  <li>slowaes</li>
-</ul>
-<p>On Ubuntu you can install the deps with.</p>
+
+
+
+
+<h3>Development version</h3>
+
+<p>Dependencies: python, qt, pyqt, gettext, ecdsa, slowaes.
+On Ubuntu you can install the dependencies with:</p>
 <pre>
-sudo apt-get install python-pip python-qt4 pyqt4-dev-tools
-sudo pip install ecdsa slowaes
+  sudo apt-get install python-pip python-qt4 pyqt4-dev-tools
+  sudo pip install ecdsa slowaes
 </pre>
+
 <p>Check out the code from Github</p>
 <pre>
   git clone git://github.com/spesmilo/electrum.git
 </pre>
+
 <p>Compile the icons</p>
 <pre>
   pyrcc4 icons.qrc -o lib/icons_rc.py
@@ -68,21 +130,12 @@ sudo pip install ecdsa slowaes
 </pre>
 <p>Install Electrum</p>
 <pre>
-sudo python setup.py install
-electrum
+  sudo python setup.py install
+  electrum
 </pre>
 
-<h4>Source on Windows</h4>
-<ul>
-  <li>Install <a href="http://www.riverbankcomputing.co.uk/software/pyqt/download">PyQt4</a> </li>
-  <li>Install <a href="https://github.com/spesmilo/electrum/zipball/1.0">Electrum-1.0.zip</a> </li>
-  <li>execute 'python electrum'</li>
-</ul>
 
-<h4>Source on OS X</h4>
-<ul>
-  <li>Install <a href="http://mxcl.github.com/homebrew/">Homebrew</a>.</li>
-  <li>Install depedencies <tt>brew install qt pyqt gettext pip</tt>.</li>
-  <li>Install Python dependencies <tt>pip install ecdsa slowaes</tt>.</li>
-  <li>Follow Linux build instructions.</li>
-</ul>
+  </div>
+</body>
+</html>
+

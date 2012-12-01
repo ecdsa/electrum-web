@@ -1,55 +1,70 @@
----
-layout: default
-section: default
----
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="css/screen.css" />
+    <link rel="shortcut icon" href="favicon.ico" />
+    <title>Electrum Bitcoin Client</title>
+</head>
+<body style="background-color:#dddddd;">
 
-<div class="opening">
-  <h3>Take back your time. No more long startups.</h3>
-  <div class="left">
-    <h3>For the users. Friendly, instant and proven.</h3>
-    <p class="description">Electrum makes Bitcoin simple.</p>
 
-    <p class="description">
-    Store your wallet on your skin or in your mind with a <a href="http://www.forbes.com/sites/jonmatonis/2012/03/12/brainwallet-the-ultimate-in-mobile-money/">brainwallet</a>.
-    You only need 12 words to recover your wallet.</p>
+<header>
+    <div class="container">
+      <nav class="right">
+	<ul>
+          <li><a href="">Home</a></li>
+          <li><a href="download.html">Download</a></li>
+          <li><a href="community.html">Community</a></li>
+	</ul>
+      </nav>
 
-    <p class="description">
-    Never wait again to download blocks. Electrum is instantly on and off from the first time you use it.</p>
-    </p>
+      <div style="width:380">
+	<div style="float:left;">
+	  <img src="data/electrum_text2.png" alt="Electrum" width="300"/>
+	  <h2>Lightweight Bitcoin Client</h2>
+	</div>
+	<div style="float:right">
+	  <img src="data/electrum_logo.svg" alt="Electrum" border="none" width="70" align="top"/>
+	</div>
+      </div>
 
-    <p class="description">
-    Donations to 1NmduGNyC5XejoysbuioodCN3jR3yf64xM 
-    </p>
-  </div>
-  <div class="left image"> 
-    <img src="./media/litegui.png" />
-  </div>
+    </div>
+</header>
+
+
+<div class="container">
+
+
+<div style="text-align:justify">
+<img src="data/litegui.png" alt="Electrum" border="none" align="right"
+style="padding:0px;"/> Electrum is an easy to use Bitcoin client. It
+protects you from losing coins in a backup mistake or computer
+failure, because your wallet can be recovered from a secret phrase
+that you can write on paper or learn by heart. There is no waiting
+time when you start the client, because it does not download the
+Bitcoin blockchain.
+</div>
+<br/>
+<br/>
+<br/>
+
+<div>
+
+<h3>Features:</h3>
+<ul>
+<li>Safe: Your private keys are encrypted and stored locally.</li>
+<li>Forgiving: Your wallet can be recovered from a secret <a href="seed.html">seed</a>.</li>
+<li>Instant on: Your client does not download the blockchain, it uses a remote server.</li>
+<li>No downtimes: Several public servers are available, you can use any of them.</li>
+<li>Ubiquitous: You can the same wallet on different computers, all instances remain synchronized.</li>
+<li>Tested and audited: Electrum is open source and was first released in November 2011.</li>
+</ul>
 </div>
 
-<h3>Features</h3>
-<ul>
-  <li>Encrypted: your private keys are protected with a password. You are protected from thieves.</li>
-  <li>Deterministic: If you lose your wallet, you can recover it from its <a href="seed.html">seed</a>. You are protected from your own mistakes.</li>
-  <li>Instant on: the client does not download the blockchain, it gets that information from a server. No delays, always up-to-date.</li>
-  <li>Secure: Your private keys are not shared with the server. You do not have to trust the server with your money.</li>
-  <li>No downtimes: Several servers are available. There is no single point of failure.</li>
-  <li>Ubiquity: You can use the same wallet on different computers. Your wallet is "in the cloud", and that cloud is the Bitcoin blockchain!</li>
-  <li>Freedom: Electrum servers do not store user accounts. You are not tied to a particular server.</li>
-  <li>No scripts: Electrum does not download any script at runtime. A compromised server cannot compromise your client.</li>
-  <li>Supports <a href="bitcoin_URIs.html">Bitcoin URIs</a></li>
-  <li>Free software: Gnu GPL v3. Anyone can audit the code. Anyone can run a server.</li>
-</ul>
+<h3>User interfaces</h3>
+<img src="data/electrum_qt.png" /><br/>
 
-<h3>Screenshot</h3>
-<img src="./media/pro-mode.png" />
-<br/><br/>
-<h3>Community</h3>
-<ul>
-  <li>Github: <a href="https://github.com/spesmilo/electrum/">https://github.com/spesmilo/electrum/</a></li>
-  <li>Discussion: <a href="https://bitcointalk.org/index.php?topic=100502.0">Electrum thread in the Bitcoin forum</a></li>
-  <li>IRC channel: join the <a href="http://webchat.freenode.net/?channels=#electrum">#electrum</a> channel on Freenode</li>
-  <li>Documentation: <a href="https://en.bitcoin.it/wiki/Electrum">https://en.bitcoin.it/wiki/Electrum</a></li>
-  <li>Localization: <a href="https://en.bitcoin.it/wiki/Electrum/Translation">https://en.bitcoin.it/wiki/Electrum/Translation</a></li>
-</ul>
+
+
 </div>
-
+</body>
+</html>
