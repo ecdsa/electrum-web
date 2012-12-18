@@ -104,13 +104,18 @@
     </td>
   </tr>
   <tr>
-    <td><img src="media/os_ubuntu.gif">Ubuntu<br/>(version 1.0)</td>
+    <td><img src="media/os_ubuntu.gif">Ubuntu / Debian<br/>(version 1.5.6)</td>
     <td>
       <ul>
 	<li>Add a new repository:<br/> <tt>sudo add-apt-repository "deb http://apt.bitcoins.sk/ precise main"</tt></li>
 	<li>Add the repo key to apt:<br/> <tt>wget -O - http://apt.bitcoins.sk/deafboy@bitcoins.sk.pub | sudo apt-key add -</tt></li>
 	<li>Update index:<br/> <tt>sudo apt-get update</tt></li>
 	<li>Install Electrum:<br/> <tt>sudo apt-get install electrum</tt></li>
+	</ul>
+
+      <ul>
+	<li>Alternatively download .deb directly:<br/> <tt><a href="http://apt.bitcoins.sk/pool/main/e/electrum/electrum_1.5.6.4_all.deb">electrum_1.5.6.4_all.deb</a></tt></li>
+	<li>Install Electrum:<br/> <tt>sudo dpkg -i electrum_1.5.6.4_all.deb</tt></li>
 	</ul>
     </td>
   </tr>
