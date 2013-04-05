@@ -1,0 +1,10 @@
+/* SITE */
+
+Electrum Bitcoin Client
+
+	url: electrum.org
+	
+	creator: ThomasV 
+	
+	
+humanstxt.org
