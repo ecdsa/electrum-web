@@ -347,18 +347,18 @@ td {
 
 /* line 37, ../_sass/screen.sass */
 header {
-  height: 35px;
+  height: 70px;
   border-bottom: 1px solid #ededed;
   background: #f2f2f2;
   padding: 15px;
-  overflow: hidden;
+  /*overflow: hidden;*/
   margin-bottom: 20px;
 }
 /* line 44, ../_sass/screen.sass */
 header nav {
   float: right;
-  margin-right: 200px;
-  margin-top: 10px;
+/*  margin-right: 200px;*/
+  margin-top: 40px;
 }
 /* line 48, ../_sass/screen.sass */
 header ul {
@@ -376,19 +376,19 @@ header ul li {
 }
 /* line 58, ../_sass/screen.sass */
 header h1 {
-  font-size: 25pt;
+  font-size: 30pt;
   margin-bottom: 0px;
   color: #515255;
-  float: left;
+  /*float: left;*/
   text-shadow: 0 1px #cccccc;
 }
 /* line 64, ../_sass/screen.sass */
 header h2 {
   color: #acb3ba;
-  float: left;
+  /*float: left;*/
   font-size: 12pt;
-  padding-top: 9px;
-  margin-left: 10px;
+  padding-top: 0px;
+  /*margin-left: 10px;*/
 }
 
 /* line 70, ../_sass/screen.sass */
@@ -398,6 +398,12 @@ h3 {
 
 /* line 73, ../_sass/screen.sass */
 .container {
-  width: 960px;
+/*    Margin:0px 5px 50px 180px;*/
+  width: 65em;
   margin: 0 auto;
+}
+
+#logo {
+    position:absolute;
+    margin:0px 0px;
 }

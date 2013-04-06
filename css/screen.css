@@ -407,3 +407,8 @@ h3 {
     position:absolute;
     margin:0px 0px;
 }
+
+body { background-color:#ddd; }
+section.container { text-align:justify; }
+.translations, nav { float:right; display:block; }
+.translations a { font-weight:normal; }

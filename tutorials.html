@@ -13,11 +13,7 @@
 		<![endif]-->
 		
 		<!-- Styles -->
-		<link rel="stylesheet" type="text/css" href="../css/screen.css" />
-		<style>
-			body { background-color:#ddd; }
-			section.container { text-align:justify; }
-		</style>
+		<link rel="stylesheet" type="text/css" href="css/screen.css" />
 		<!-- /Styles -->
 
 		<!-- Links -->
@@ -29,28 +25,36 @@
 		<!-- Analytics -->
 		
 		<!-- /Analytics -->
+			
+		<!-- js -->
+		<script src=https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js></script>
+		<script>
+		$(document).ready(function(){
+			$('#translations').load('langs_nav.html #langs_main');
+			$('#nav').load('langs_nav.html #nav_en');
+		});
+		</script>
+		<!-- /js -->
 	</head>
 
 	<body>
 
 		<header>
 		    <div class="container">
-				<nav class="right">
-					<ul>
-						<li><a href="index.html">Home</a></li>
-						<li><a href="download.html">Download</a></li>
-						<li><a href="documentation.html">Documentation</a></li>
-						<li><a href="community.html">Community</a></li>
-					</ul>
+		    	<ul id=translations>
+			    	<!-- langs -->
+			    </ul>
+				<nav id=nav>
+					<!-- nav -->
 				</nav>
 				
 				<div style="width:380px">
 					<div style="float:left;">
-						<img src="../media/electrum_text2.png" alt="Electrum" width="300"/>
+						<img src="media/electrum_text2.png" alt="Electrum" width="300"/>
 						<h2>Lightweight Bitcoin Client</h2>
 					</div>
 					<div style="float:right">
-						<img src="../media/electrum_logo.png" alt="Electrum" border="none" width="70" align="top"/>
+						<img src="media/electrum_logo.png" alt="Electrum" border="none" width="70" align="top"/>
 					</div>
 				</div>
 		    </div>

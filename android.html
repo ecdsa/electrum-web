@@ -1,61 +1,120 @@
-<html>
-<body>
-<div style="width:35em;margin-left:5em;">
-<h2>Electrum for Android</h2>
+<!DOCTYPE html>
+<html lang=es>
+	<head>
+		<title>Electrum Bitcoin Client</title>
+		
+		<meta charset=utf-8 />
+		<meta name=description content="Lightweight Bitcoin Client" />
+		<meta name=keywords content="electrum,bitcoin,blockchain,lightweight,instant" />
+		<!--<meta name=viewport content="width=device-width, initial-scale=1.0" />-->
+		
+		<!--[if lt IE 9]>
+		<script type="text/javascript" src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+		
+		<!-- Styles -->
+		<link rel="stylesheet" type="text/css" href="css/screen.css" />
+		<!-- /Styles -->
 
-This page explains how to install Electrum on Android devices.<br/><br/> 
+		<!-- Links -->
+		<link rel="shortcut icon" href="favicon.ico" />
+		<link rel=apple-touch-icon-precomposed href=.png />
+		<link rel=author type=text/plain href=humans.txt>
+		<!-- /Links -->
+		
+		<!-- Analytics -->
+		
+		<!-- /Analytics -->
+			
+		<!-- js -->
+		<script src=https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js></script>
+		<script>
+		$(document).ready(function(){
+			$('#translations').load('langs_nav.html #langs_main');
+			$('#nav').load('langs_nav.html #nav_en');
+		});
+		</script>
+		<!-- /js -->
+	</head>
 
-Please note that Electrum is not distributed as a binary package, but
-as python source code. This means that installation is slightly more
-complicated than downloading an app from the Android market. <br/><br/>
+	<body>
 
-It is possible to install everything from QR codes.  If you encounter
-problems, you may find help at
-<a href="http://maketecheasier.com/install-applications-without-the-market/2011/01/28">
-this link</a>.
+		<header>
+		    <div class="container">
+		    	<ul id=translations>
+			    	<!-- langs -->
+			    </ul>
+				<nav id=nav>
+					<!-- nav -->
+				</nav>
+				
+				<div style="width:380px">
+					<div style="float:left;">
+						<img src="media/electrum_text2.png" alt="Electrum" width="300"/>
+						<h2>Lightweight Bitcoin Client</h2>
+					</div>
+					<div style="float:right">
+						<img src="media/electrum_logo.png" alt="Electrum" border="none" width="70" align="top"/>
+					</div>
+				</div>
+		    </div>
+		</header>
 
-
-<h3>1. Download and install Google Scripting Layer for Android</h3>
-
-You can get
-it <a href="http://code.google.com/p/android-scripting/wiki/Unofficial">here</a>,
-or by scanning the following qr code: <br/>
-<img src="http://chart.apis.google.com/chart?cht=qr&chs=150x150&chld=L&choe=UTF-8&chl=http%3A%2F%2Fwww.mithril.com.au%2Fandroid%2Fsl4a_r5x.apk"
-/>
-
-
-<h3>2. Download and install Python for Android</h3>
-
-You can get
-it <a href="http://code.google.com/p/python-for-android/downloads/detail?name=PythonForAndroid_r5.apk">here</a>,
-or by scanning the following qr code: <br/>
-<img src="http://chart.apis.google.com/chart?cht=qr&chs=200x200&chld=L&choe=UTF-8&chl=http%3A%2F%2Fpython-for-android.googlecode.com%2Ffiles%2FPythonForAndroid_r5.apk"/>
-<br/>
-Once you have installed the apk, launch the Python for Android application and click 'install'
-
-<h3>3. Download the Electrum install script</h3>
-
-<pre>
+		<section class="container">
+			
+			<h2>Electrum for Android</h2>
+			
+			<p>This page explains how to install Electrum on Android devices.<br /></p> 
+			
+			<p>Please note that Electrum is not distributed as a binary package, but as python source code. This means that installation is slightly more complicated than downloading an app from the Android market.<br /></p>
+			
+			<p>It is possible to install everything from QR codes. If you encounter problems, you may find help at <a href="http://maketecheasier.com/install-applications-without-the-market/2011/01/28">this link</a>.</p>
+			
+			
+			<h3>1. Download and install Google Scripting Layer for Android</h3>
+			
+			<p>You can get it <a href="http://code.google.com/p/android-scripting/wiki/Unofficial">here</a>, or by scanning the following qr code:
+			<br /><br />
+			<img src="http://chart.apis.google.com/chart?cht=qr&chs=150x150&chld=L&choe=UTF-8&chl=http%3A%2F%2Fwww.mithril.com.au%2Fandroid%2Fsl4a_r5x.apk"
+			/></p>
+			
+			<h3>2. Download and install Python for Android</h3>
+			
+			<p>You can get
+			it <a href="http://code.google.com/p/python-for-android/downloads/detail?name=PythonForAndroid_r5.apk">here</a>,
+			or by scanning the following qr code:
+			<br /><br />
+			<img src="http://chart.apis.google.com/chart?cht=qr&chs=200x200&chld=L&choe=UTF-8&chl=http%3A%2F%2Fpython-for-android.googlecode.com%2Ffiles%2FPythonForAndroid_r5.apk"/>
+			<br /><br />
+			Once you have installed the apk, launch the Python for Android application and click 'install'</p>
+			
+			<h3>3. Download the Electrum install script</h3>
+			
+			<pre>
 1. Launch SL4A.
 2. Press the Menu button.
 3. Tap Add.
 4. Tap Scan Barcode.
-5. Scan the following QRcode:
-</pre>
-<img src="http://chart.apis.google.com/chart?cht=qr&chs=300x300&chld=L&choe=UTF-8&chl=e4a_install.py%0Aimport+urllib%2C+zipfile%2C+os%0Ap%3D%22http%3A%2F%2Felectrum.bitcoin.cz%2Fdownload%2Fe4a-172zip%22%0An%3D%22e4a-1.7.2%22%0Anz%3Dn%2B%22.zip%22%0Aurllib.urlretrieve(p%2Cnz)%0Azipfile.ZipFile(nz).extractall()%0Aos.rename(n%2C'scripts%2F'%2Bn)"
-/>
-<pre>This will install a script named e4a_install.py</pre>
-
-<h3>4. Download and install Electrum</h3>
-<pre>
+5. Scan the following QRcode:</pre>
+			
+			<img src="http://chart.apis.google.com/chart?cht=qr&chs=300x300&chld=L&choe=UTF-8&chl=e4a_install.py%0Aimport+urllib%2C+zipfile%2C+os%0Ap%3D%22http%3A%2F%2Fecdsa.org%2Felectrum%2Fe4a%22%0An%3D%22Electrum-0.43d%22%0Anz%3Dn%2B%22.zip%22%0Aurllib.urlretrieve(p%2Cnz)%0Azipfile.ZipFile(nz).extractall()%0Aos.rename(n%2C'scripts%2F'%2Bn)"
+			/>
+			<br /><br />
+			<p>This will install a script named e4a_install.py</p>
+			
+			<h3>4. Download and install Electrum</h3>
+			
+			<pre>
 1. Tap e4a_install.py: it will download and install a directory named "e4a-1.7.2
-2. To launch Electrum, visit the "e4a-1.7.2" directory and tap 'electrum.py'
-</pre>
-
-<h3>5. Create a shortcut to your home screen</h3>
-<pre>
+2. To launch Electrum, visit the "e4a-1.7.2" directory and tap 'electrum.py'</pre>
+			
+			<h3>5. Create a shortcut to your home screen</h3>
+			
+			<pre>
 1. Go to your home screen, click the menu button and select "Add to Home".
 2. In the menu that shows up, choose "Shortcut", then "Scripts"
-3. Navigate to the electrum.py script.
-</body>
+3. Navigate to the electrum.py script.</pre>	
+					
+		</section><!-- /container -->
+	</body>
 </html>
