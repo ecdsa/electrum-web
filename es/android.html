@@ -9,6 +9,10 @@
 		<!--<meta name=viewport content="width=device-width, initial-scale=1.0" />-->
 		
 		<!--[if lt IE 9]>
+		<script type="text/javascript" src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+		
+		<!-- Styles -->
 		<link rel="stylesheet" type="text/css" href="../css/screen.css" />
 		<!-- /Styles -->
 
@@ -28,6 +32,9 @@
 		$(document).ready(function(){
 			$('#translations').load('../langs_nav.html #langs_subdir');
 			$('#nav').load('../langs_nav.html #nav_es');
+		});
+		$(window).bind("load", function() {
+		   $('a[href="es"]').removeAttr('href');
 		});
 		</script>
 		<!-- /js -->

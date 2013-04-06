@@ -33,6 +33,9 @@
 			$('#translations').load('../langs_nav.html #langs_subdir');
 			$('#nav').load('../langs_nav.html #nav_es');
 		});
+		$(window).bind("load", function() {
+		   $('a[href="es"]').removeAttr('href');
+		});
 		</script>
 		<!-- /js -->
 	</head>
