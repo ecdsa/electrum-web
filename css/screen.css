@@ -358,7 +358,7 @@ header {
 header nav {
   float: right;
 /*  margin-right: 200px;*/
-  margin-top: 40px;
+  margin-bottom: 20px;
 }
 /* line 48, ../_sass/screen.sass */
 header ul {
@@ -408,7 +408,45 @@ h3 {
     margin:0px 0px;
 }
 
-body { background-color:#ddd; }
-section.container { text-align:justify; }
-.translations, nav { float:right; display:block; }
+body { padding-bottom:10px; background-color:#ddd; }
+
+header ul, header ol {
+  margin:0;
+  padding-left:0;
+}
+header nav {
+	float:right;
+	display:block;
+	clear:right;
+}
+
+.header {
+	width:380px;
+	overflow:hidden;
+	}
+	#logo {
+		width:300px;
+		height:45px;
+		display:block;
+		background:url(../media/electrum_text.png) no-repeat 0 0;
+		background-image: -webkit-image-set( url(../media/electrum_text.png) 1x, url(../media/electrum_text.png) 2x);
+		background-size:300px 45px;
+		}
+		#logo span, #electrum_logo img { position:absolute; top:100%; left:-99999px; }
+	
+	.header h2 { margin-top:45px; }
+	
+	#electrum_logo {
+		width:70px;
+		height:66px;
+		display:block;
+		float:right;
+		background:url(../media/electrum_logo.png) no-repeat 0 0;
+		background-image: -webkit-image-set( url(../media/electrum_logo.png) 1x, url(../media/electrum_logo.png) 2x);
+		background-size:70px 66px;
+	}
+
+nav#translations { margin-top:0 !important; }
 .translations a { font-weight:normal; }
+
+section.container { text-align:justify; }
