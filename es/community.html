@@ -14,14 +14,6 @@
 		
 		<!-- Styles -->
 		<link rel="stylesheet" type="text/css" href="../css/screen.css" />
-		<style>
-			body { background-color:#ddd; }
-			section.container { text-align:justify; }
-			.translations{
-				float:right;
-				}
-				.translations a { font-weight:normal; }
-		</style>
 		<!-- /Styles -->
 
 		<!-- Links -->
@@ -33,34 +25,35 @@
 		<!-- Analytics -->
 		
 		<!-- /Analytics -->
+			
+		<!-- js -->
+		<script src=https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js></script>
+		<script>
+		$(document).ready(function(){
+			$('#translations').load('../langs_nav.html #langs_subdir');
+			$('#nav').load('../langs_nav.html #nav_es');
+		});
+		$(window).bind("load", function() {
+		   $('a[href="es"]').removeAttr('href');
+		});
+		</script>
+		<!-- /js -->
 	</head>
 
 	<body>
+
 		<header>
 		    <div class="container">
-		    	<ul class=translations>
-			    	<small>
-			    	<li><a href="../">en</a></li>
-			    	<li><a>es</a></li>
-			    	</small>
-			    </ul>
-				<nav class="right">
-					<ul>
-						<li><a href="index.html">Inicio</a></li>
-						<li><a href="../download.html">Descargar</a></li>
-						<li><a href="documentation.html">Documentación</a></li>
-						<li><a href="community.html">Comunidad</a></li>
-					</ul>
+		    	<nav id=translations>
+			    	<!-- langs -->
+			    </nav>
+				<nav id=nav>
+					<!-- nav -->
 				</nav>
-				
-				<div style="width:380px">
-					<div style="float:left;">
-						<img src="../media/electrum_text2.png" alt="Electrum" width="300"/>
-						<h2>Lightweight Bitcoin Client</h2>
-					</div>
-					<div style="float:right">
-						<img src="../media/electrum_logo.png" alt="Electrum" border="none" width="70" align="top"/>
-					</div>
+				<div class=header>
+					<i id=electrum_logo><img src="media/electrum_logo.png" alt="Electrum" border="none" width="70" align="top" /></i>
+					<div id=logo><span>Electrum</span></div>
+					<h2>Lightweight Bitcoin Client</h2>
 				</div>
 		    </div>
 		</header>
@@ -80,16 +73,16 @@
 
 			<h3>Desarrolladores</h3>
 			<ul>
-			    <li>ThomasV - creador.</li>
+			    <li>ThomasV - Creador y desarrollador.</li>
 			    <li>Animazing - Diseñó la nueva interfaz gráfica.</li>
 			    <li>Azelphur - Diseño.</li>
 			    <li>Coblee - Soporte para monedas alternativas y py2app.</li>
 			    <li>Deafboy - Paquetes de Ubuntu.</li>
 			    <li>EagleTM - Solución de errores.</li>
 			    <li>ErebusBat - Distribución de Mac.</li>
-			    <li>Genjix - adaptación de la funcionalidad avanzada a Lite.</li>
-			    <li>Slush - trabaja en el código de los servidores. Diseñó la especificación original de Stratum.</li>
-			    <li>Tuxavant - varias correcciones al cliente.</li>
+			    <li>Genjix - Adaptación de la funcionalidad avanzada a Lite.</li>
+			    <li>Slush - Trabaja en el código de los servidores. Diseñó la especificación original de Stratum.</li>
+			    <li>Tuxavant - Varias correcciones al cliente.</li>
 			</ul>
 
 		</section><!-- /container -->

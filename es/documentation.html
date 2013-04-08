@@ -14,14 +14,6 @@
 		
 		<!-- Styles -->
 		<link rel="stylesheet" type="text/css" href="../css/screen.css" />
-		<style>
-			body { background-color:#ddd; }
-			section.container { text-align:justify; }
-			.translations{
-				float:right;
-				}
-				.translations a { font-weight:normal; }
-		</style>
 		<!-- /Styles -->
 
 		<!-- Links -->
@@ -33,80 +25,48 @@
 		<!-- Analytics -->
 		
 		<!-- /Analytics -->
+			
+		<!-- js -->
+		<script src=https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js></script>
+		<script>
+		$(document).ready(function(){
+			$('#translations').load('../langs_nav.html #langs_subdir');
+			$('#nav').load('../langs_nav.html #nav_es');
+		});
+		$(window).bind("load", function() {
+		   $('a[href="es"]').removeAttr('href');
+		});
+		</script>
+		<!-- /js -->
 	</head>
 
 	<body>
 
-		<header>
+	<header>
 		    <div class="container">
-		    	<ul class=translations>
-			    	<small>
-			    	<li><a href="../">en</a></li>
-			    	<li><a>es</a></li>
-			    	</small>
-			    </ul>
-				<nav class="right">
-					<ul>
-						<li><a href="index.html">Inicio</a></li>
-						<li><a href="../download.html">Descargar</a></li>
-						<li><a href="documentation.html">Documentación</a></li>
-						<li><a href="community.html">Comunidad</a></li>
-					</ul>
+		    	<nav id=translations>
+			    	<!-- langs -->
+			    </nav>
+				<nav id=nav>
+					<!-- nav -->
 				</nav>
-				
-				<div style="width:380px">
-					<div style="float:left;">
-						<img src="../media/electrum_text2.png" alt="Electrum" width="300"/>
-						<h2>Lightweight Bitcoin Client</h2>
-					</div>
-					<div style="float:right">
-						<img src="../media/electrum_logo.png" alt="Electrum" border="none" width="70" align="top"/>
-					</div>
+				<div class=header>
+					<i id=electrum_logo><img src="media/electrum_logo.png" alt="Electrum" border="none" width="70" align="top" /></i>
+					<div id=logo><span>Electrum</span></div>
+					<h2>Lightweight Bitcoin Client</h2>
 				</div>
 		    </div>
 		</header>
 
 		<section class="container">
 			
-			<h3>Step by step tutorials</h3>
-			
-			<br />
-			<h4>¿Por qué Electrum?</h4>
+			<h3>Documentacón</h3>
+
 			<ul>
-				<li>Instantáneo: Tu cliente no tiene que descargar la cadena de bloques, usa un servidor remoto.</li>
-				<li>Olvidar: Tu cartera puede ser recuperada desde una <a href="seed.html">semilla</a> secreta.</li>
-				<li>Segura: Las llaves privadas no son enviadas nunca al servidor. La información enviada por el servidor es verificada usando <a href="https://en.bitcoin.it/wiki/Thin_Client_Security#Header-Only_Clients">SPV</a>.</li>
-				<li>Sin caídas: Muchos servidores públicos están disponibles, puedes cambiar instantáneamente.</li>
-				<li>Omnipresente: Puedes usar la misma cartera en diferentes ordenadores, se auto-sincronizará.</li>
-				<li>Abierto: Puedes exportar tus llaves privadas a otros clientes Bitcoin.</li>
-				<li>Probado y auditado: Electrum es de código abierto y fue presentado por primera vez en Noviembre de 2011.</li>
+				<li><a href="tutorials.html">Tutoriales paso a paso</a></li>
+				<li><a href="offline_wallets.html">Como firmar una transacción con una cartera sin conexión de Electrum</a>.</li>
+				<li><a href="console.html">Consola</a></li>
 			</ul>
-			
-			<br />
-			<h4>Empezando</h4>
-			<ul>
-				<li>Una vez que hayas descargado e iniciado Electrum por primera vez te pedirá que crees una cartera.</li>
-				<li>Selecciona un servidor de la lista y selecciona OK.</li>
-				<li>Una semilla será generada para ti. Debes mantener esta semilla en un lugar seguro, ésta te permitirá restaurar tu cartera en el futuro.</li>
-				<li>Es recomendable usar una contraseña difícil para encriptar tu cartera.</li>
-				<li>Ya puedes empezar a usar Electrum para enviar y recibir Bitcoins.</li>
-				<li>Nuevas direcciones son generadas automáticamente cuando tus direcciones entrantes son usadas.</li>
-			</ul>
-			
-			<h4>Restaurar la cartera con tu semilla. Crear una cartera sin semilla.</h4>
-			<ul>
-				<li>Si has perdido tu cartera de Electrum puedes restaurarla con tu semilla.</li>
-				<li>Inicia Electrum y selecciona la opción restaurar, introduce tu semilla y deja el límite de direcciones vacías predeterminado si no lo cambiaste en tu Electrum anterior.</li>
-				<li>Sigue los pasos como si estuvieras creando tu cartera por primera vez.</li>
-				<li>Mira el otro tutorial "Crear copias de seguridad" para ver como no perder las etiquetas que has puesto a tus direcciones por si alguna vez necesitas restaurar tu cartera otra vez.</li>
-				<br />
-				<li>Las carteras sin semilla pueden generar direcciones para recibir Bitcoins, pero no enviarlos.</li>
-				<li>Para crear una cartera sin semilla inicia Electrum, selecciona la opción restaurar e introduce tu Llave Pública Maestra en lugar de tu semilla.</li>
-				<li>Puedes usar carteras sin semilla en Terminales de Punto de Venta</li>
-			</ul>
-						
-			<br />		
-			<h4>¿Qué hacer con mis direcciones y cartera anteriores cuando cambie a Electrum?</h4>
 
 		</section><!-- /container -->
 	</body>

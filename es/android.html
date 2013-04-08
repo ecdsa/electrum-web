@@ -14,14 +14,6 @@
 		
 		<!-- Styles -->
 		<link rel="stylesheet" type="text/css" href="../css/screen.css" />
-		<style>
-			body { background-color:#ddd; }
-			section.container { text-align:justify; }
-			.translations{
-				float:right;
-				}
-				.translations a { font-weight:normal; }
-		</style>
 		<!-- /Styles -->
 
 		<!-- Links -->
@@ -33,35 +25,35 @@
 		<!-- Analytics -->
 		
 		<!-- /Analytics -->
+			
+		<!-- js -->
+		<script src=https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js></script>
+		<script>
+		$(document).ready(function(){
+			$('#translations').load('../langs_nav.html #langs_subdir');
+			$('#nav').load('../langs_nav.html #nav_es');
+		});
+		$(window).bind("load", function() {
+		   $('a[href="es"]').removeAttr('href');
+		});
+		</script>
+		<!-- /js -->
 	</head>
 
 	<body>
 
 		<header>
 		    <div class="container">
-		    	<ul class=translations>
-			    	<small>
-			    	<li><a href="../">en</a></li>
-			    	<li><a>es</a></li>
-			    	</small>
-			    </ul>
-				<nav class="right">
-					<ul>
-						<li><a href="index.html">Inicio</a></li>
-						<li><a href="../download.html">Descargar</a></li>
-						<li><a href="documentation.html">Documentación</a></li>
-						<li><a href="community.html">Comunidad</a></li>
-					</ul>
+		    	<nav id=translations>
+			    	<!-- langs -->
+			    </nav>
+				<nav id=nav>
+					<!-- nav -->
 				</nav>
-				
-				<div style="width:380px">
-					<div style="float:left;">
-						<img src="../media/electrum_text2.png" alt="Electrum" width="300"/>
-						<h2>Lightweight Bitcoin Client</h2>
-					</div>
-					<div style="float:right">
-						<img src="../media/electrum_logo.png" alt="Electrum" border="none" width="70" align="top"/>
-					</div>
+				<div class=header>
+					<i id=electrum_logo><img src="media/electrum_logo.png" alt="Electrum" border="none" width="70" align="top" /></i>
+					<div id=logo><span>Electrum</span></div>
+					<h2>Lightweight Bitcoin Client</h2>
 				</div>
 		    </div>
 		</header>
@@ -110,7 +102,7 @@
 			<img src="http://chart.apis.google.com/chart?cht=qr&chs=300x300&chld=L&choe=UTF-8&chl=e4a_install.py%0Aimport+urllib%2C+zipfile%2C+os%0Ap%3D%22http%3A%2F%2Fecdsa.org%2Felectrum%2Fe4a%22%0An%3D%22Electrum-0.43d%22%0Anz%3Dn%2B%22.zip%22%0Aurllib.urlretrieve(p%2Cnz)%0Azipfile.ZipFile(nz).extractall()%0Aos.rename(n%2C'scripts%2F'%2Bn)"
 			/>
 			<pre>
-			Esto instalará el script llamado e4a_install.py
+Esto instalará el script llamado e4a_install.py
 			</pre>
 			
 			<h3>4. Descarga e instala Electrum</h3>

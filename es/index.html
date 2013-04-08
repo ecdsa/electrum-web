@@ -14,14 +14,6 @@
 		
 		<!-- Styles -->
 		<link rel="stylesheet" type="text/css" href="../css/screen.css" />
-		<style>
-			body { background-color:#ddd; }
-			section.container { text-align:justify; }
-			.translations{
-				float:right;
-				}
-				.translations a { font-weight:normal; }
-		</style>
 		<!-- /Styles -->
 
 		<!-- Links -->
@@ -33,38 +25,38 @@
 		<!-- Analytics -->
 		
 		<!-- /Analytics -->
+			
+		<!-- js -->
+		<script src=https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js></script>
+		<script>
+		$(document).ready(function(){
+			$('#translations').load('../langs_nav.html #langs_subdir');
+			$('#nav').load('../langs_nav.html #nav_es');
+		});
+		$(window).bind("load", function() {
+		   $('a[href="es"]').removeAttr('href');
+		});
+		</script>
+		<!-- /js -->
 	</head>
 
 	<body>
 
-		<header>
-		    <div class="container">
-			    <ul class=translations>
-			    	<small>
-			    	<li><a href="../">en</a></li>
-			    	<li><a>es</a></li>
-			    	</small>
-			    </ul>
-				<nav class="right">
-					<ul>
-						<li><a href="index.html">Inicio</a></li>
-						<li><a href="../download.html">Descargar</a></li>
-						<li><a href="documentation.html">Documentación</a></li>
-						<li><a href="community.html">Comunidad</a></li>
-					</ul>
-				</nav>
-				
-				<div style="width:380px">
-					<div style="float:left;">
-						<img src="../media/electrum_text2.png" alt="Electrum" width="300"/>
-						<h2>Lightweight Bitcoin Client</h2>
-					</div>
-					<div style="float:right">
-						<img src="../media/electrum_logo.png" alt="Electrum" border="none" width="70" align="top"/>
-					</div>
-				</div>
-		    </div>
-		</header>
+	<header>
+	    <div class="container">
+	    	<nav id=translations>
+		    	<!-- langs -->
+		    </nav>
+			<nav id=nav>
+				<!-- nav -->
+			</nav>
+			<div class=header>
+				<i id=electrum_logo><img src="media/electrum_logo.png" alt="Electrum" border="none" width="70" align="top" /></i>
+				<div id=logo><span>Electrum</span></div>
+				<h2>Lightweight Bitcoin Client</h2>
+			</div>
+	    </div>
+	</header>
 
 		<section class="container">
 			
@@ -73,7 +65,7 @@
 			
 			<br /><br />
 			
-			<p>Electrum es un cliente Bitcoin fácil de usar. Te protege de perder tus monedas si cometes un errores al crear copias de seguridad o tu ordenador falla, porque tu cartera puede ser recuperada desde una frase secreta que puedes escribir en un papel o aprender de memoria. No hay esperas cuando inicias el cliente, porque no se descarga la cadena de bloques de Bitcoin.</p>
+			<p>Electrum es un cliente Bitcoin fácil de usar. Te protege de perder tus monedas si cometes un error al crear copias de seguridad o tu ordenador falla, porque tu cartera puede ser recuperada desde una frase secreta que puedes escribir en un papel o aprender de memoria. No hay esperas cuando inicias el cliente, porque no se descarga la cadena de bloques de Bitcoin.</p>
 			
 			<br /><br />
 			
@@ -91,9 +83,7 @@
 			<br />
 			<h3>Interfaces de usuarios</h3>
 			
-			<p>Electrum tiene muchas interfaces gráficas, que comparten la misma cartera: Clásico (Qt), Lite, Gtk, Android, Texto (usando '{ }').
-			<br /><br />
-			<img src="../media/electrum_qt.png" /><br /></p>
+			<p>Electrum tiene muchas interfaces gráficas, que comparten la misma cartera: Clásico (Qt), Lite, Gtk, Android, Texto (usando '{ }'). Ve a <a href="screenshots.html">capturas de pantalla</a> para ver algunos ejemplos.</p>
 
 		</section><!-- /container -->
 	</body>

@@ -1,28 +1,7 @@
-<html>
-  <head>
-    <!--<link rel="stylesheet" type="text/css" href="http://s3.ecdsa.org/style.css" />-->
-    <link rel="stylesheet" type="text/css" href="./css/screen.css" />
-    <link rel="shortcut icon" href="http://s3.ecdsa.org/favicon.ico" />
-    <title>Electrum Bitcoin Client</title>
-  </head>
-<body>
-  <header>
-    <div class="container">
-      <h1>Electrum</h1> 
-      <h2>The user friendly bitcoin client</h2>
-    </div>
-    <nav class="right">
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="download.html">Download</a></li>
-        <!--<li>Developers</li>-->
-        <li><a href="credits.html">Credits</a></li>
-      </ul>
-    </nav>
-  </header>
-
-  <div class="container"> 
-    <h2>Bitcoin URIs</h2>
+---
+layout: default
+---
+<h2>Bitcoin URIs</h2>
 Bitcoin URIs are formed with a Bitcoin address and some optional parameters, such as amount and label.<br/>
 Example: <tt><a href="bitcoin:19mP9FKrXqL46Si58pHdhGKow88SUPy1V8?amount=1&message=donation">bitcoin:19mP9FKrXqL46Si58pHdhGKow88SUPy1V8?amount=1&message=donation</a></tt><br/>
 <br/>
@@ -152,8 +131,3 @@ Example (tampered signature): <a href="bitcoin:16kfzDMX2Gr7hXrwRQQGkxrd5eBveKH77
 The signing identity can be an alias.<br/>
 Example: <tt><a href="bitcoin:15kfzDMX2Gr7hXrwRQQGkxrd5eBveKH777?amount=50&message=how%20are%20you&signature=ecdsa.org:HHMNlNJYbc6ppJ1UUT1PMXuHdG2e54RZNh3vamrSpDfh442jOwb%2BJHyfSQNRhQt0dB0uf8kJxNbO4lA95byKhx4%3D">bitcoin:15kfzDMX2Gr7hXrwRQQGkxrd5eBveKH777?amount=50&message=how%20are%20you&signature=ecdsa.org:HHMNlNJYbc6ppJ1UUT1PMXuHdG2e54RZNh3vamrSpDfh442jOwb%2BJHyfSQNRhQt0dB0uf8kJxNbO4lA95byKhx4%3D</a></tt><br/>
 In that case the Electrum client will display the alias instead of the key [<a href="electrum_signed_uri_alias.png">screenshot</a>]
-
-  </div>
-</body>
-</html>
-

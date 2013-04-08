@@ -1,72 +1,88 @@
-<html>
-<head>
-    <link rel="stylesheet" type="text/css" href="css/screen.css" />
-    <link rel="shortcut icon" href="favicon.ico" />
-    <title>Electrum Bitcoin Client</title>
-</head>
-<body style="background-color:#dddddd;">
+<!DOCTYPE html>
+<html lang=en>
+	<head>
+		<title>Electrum Bitcoin Client</title>
+		
+		<meta charset=utf-8 />
+		<meta name=description content="Lightweight Bitcoin Client" />
+		<meta name=keywords content="electrum,bitcoin,blockchain,lightweight,instant" />
+		<!--<meta name=viewport content="width=device-width, initial-scale=1.0" />-->
+		
+		<!--[if lt IE 9]>
+		<script type="text/javascript" src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+		
+		<!-- Styles -->
+		<link rel="stylesheet" type="text/css" href="css/screen.css" />
+		<!-- /Styles -->
+
+		<!-- Links -->
+		<link rel="shortcut icon" href="favicon.ico" />
+		<link rel=apple-touch-icon-precomposed href=.png />
+		<link rel=author type=text/plain href=humans.txt>
+		<!-- /Links -->
+		
+		<!-- Analytics -->
+		
+		<!-- /Analytics -->
+			
+		<!-- js -->
+		<script src=https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js></script>
+		<script>
+		$(document).ready(function(){
+			$('#translations').load('langs_nav.html #langs_main');
+			$('#nav').load('langs_nav.html #nav_en');
+		});
+		</script>
+		<!-- /js -->
+	</head>
+
+	<body>
+
+		<header>
+		    <div class="container">
+		    	<nav id=translations>
+			    	<!-- langs -->
+			    </nav>
+				<nav id=nav>
+					<!-- nav -->
+				</nav>
+				<div class=header>
+					<i id=electrum_logo><img src="media/electrum_logo.png" alt="Electrum" border="none" width="70" align="top" /></i>
+					<div id=logo><span>Electrum</span></div>
+					<h2>Lightweight Bitcoin Client</h2>
+				</div>
+		    </div>
+		</header>
+		
+		<section class="container">
+
+			<h3>Community</h3>
+			<ul>
+				<li><a href="https://github.com/spesmilo/electrum">Project page on GitHub</a></li>
+				<li>Discussion, bug reports and support: <a href="https://bitcointalk.org/index.php?board=98.0">Electrum subforum at bitcointalk.org</a></li>
+				<li>IRC channel: join the <a href="irc://irc.freenode.net/electrum">#electrum</a> channel on Freenode</li>
+				<li>Documentation: <a href="https://en.bitcoin.it/wiki/Electrum">https://en.bitcoin.it/wiki/Electrum</a></li>
+				<li>Localization: <a href="http://bitcoin.wikia.com/wiki/Electrum">http://bitcoin.wikia.com/wiki/Electrum</a></li>
+				<li>Servers list and status: <a href="http://electrum.be">http://electrum.be</a> (updated every 5 minutes)</li>
+			</ul>
 
 
-<header>
-    <div class="container">
-    	<ul id=translations style="float:right;">
-	    	<small>
-	    	<li><a style="font-weight:normal;">en</li>
-	    	<li><a href="es" style="font-weight:normal;">es</li>
-	    	</small>
-	    </ul>
-      <nav class="right">
-	<ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="download.html">Download</a></li>
-          <!--<li><a href="documentation.html">Documentation</a></li>-->
-          <li><a href="community.html">Community</a></li>
-	</ul>
-      </nav>
+			<h3>Developers</h3>
+			<ul>
+			    <li>ThomasV - creator and maintainer.</li>
+			    <li>Animazing - Styled the new GUI.</li>
+			    <li>Azelphur - GUI stuff.</li>
+			    <li>Coblee - Alternate coin support and py2app support.</li>
+			    <li>Deafboy - Ubuntu packages.</li>
+			    <li>EagleTM - bugfixes.</li>
+			    <li>ErebusBat - Mac distribution.</li>
+			    <li>Genjix - porting pro-mode functionality to lite-gui.</li>
+			    <li>Slush - work on the server. Designed the original Stratum spec.</li>
+			    <li>Tuxavant - various fixes to the client.</li>
+			</ul>
 
-      <div style="width:380">
-	<div style="float:left;">
-	  <img src="media/electrum_text2.png" alt="Electrum" width="300"/>
-	  <h2>Lightweight Bitcoin Client</h2>
-	</div>
-	<div style="float:right">
-	  <img src="media/electrum_logo.png" alt="Electrum" border="none" width="70" align="top"/>
-	</div>
-      </div>
-
-    </div>
-</header>
-
-<div class="container"> 
-
-<h3>Community</h3>
-<ul>
-<li><a href="https://github.com/spesmilo/electrum">Project page on GitHub</a></li>
-<li>Discussion, bug reports and
-  support: <a href="https://bitcointalk.org/index.php?board=98.0">Electrum subforum at bitcointalk.org</a></li>
-<li>IRC channel: join the <a href="irc://irc.freenode.net/electrum">#electrum</a> channel on Freenode</li>
-<li>Documentation: <a href="https://en.bitcoin.it/wiki/Electrum">https://en.bitcoin.it/wiki/Electrum</a></li>
-<li>Localization: <a href="http://bitcoin.wikia.com/wiki/Electrum">http://bitcoin.wikia.com/wiki/Electrum</a></li>
-<li>Servers list and status: <a href="http://electrum.be">http://electrum.be</a> (updated every 5 minutes)</li>
-</ul>
-
-
-<h3>Developers</h3>
-<ul>
-    <li>ThomasV - creator and maintainer.</li>
-    <li>Animazing - Styled the new GUI.</li>
-    <li>Azelphur - GUI stuff.</li>
-    <li>Coblee - Alternate coin support and py2app support.</li>
-    <li>Deafboy - Ubuntu packages.</li>
-    <li>EagleTM - bugfixes.</li>
-    <li>ErebusBat - Mac distribution.</li>
-    <li>Genjix - porting pro-mode functionality to lite-gui.</li>
-    <li>Slush - work on the server. Designed the original Stratum spec.</li>
-    <li>Tuxavant - various fixes to the client.</li>
-</ul>
-
-
-</div>
-</body>
+		</section><!-- /container -->
+	</body>
 </html>
 
