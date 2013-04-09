@@ -30,15 +30,14 @@
 		<script src=https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js></script>
 		<script>
 		$(document).ready(function(){
-			$('#translations').load('langs_nav.html #langs_main');
-			$('#nav').load('langs_nav.html #nav_en');
+			$('#translations').load('../langs_nav.html #langs_main');
+			$('#nav').load('../langs_nav.html #nav_en');
 		});
 		</script>
 		<!-- /js -->
 	</head>
 
 	<body>
-
 		<header>
 		    <div class="container">
 		    	<nav id=translations>
@@ -54,35 +53,23 @@
 				</div>
 		    </div>
 		</header>
-		
+
 		<section class="container">
-
-			<h3>Community</h3>
-			<ul>
-				<li><a href="https://github.com/spesmilo/electrum">Project page on GitHub</a></li>
-				<li>Discussion, bug reports and support: <a href="https://bitcointalk.org/index.php?board=98.0">Electrum subforum at bitcointalk.org</a></li>
-				<li>IRC channel: join the <a href="irc://irc.freenode.net/electrum">#electrum</a> channel on Freenode</li>
-				<li>Documentation: <a href="https://en.bitcoin.it/wiki/Electrum">https://en.bitcoin.it/wiki/Electrum</a></li>
-				<li>Localization: <a href="http://bitcoin.wikia.com/wiki/Electrum">http://bitcoin.wikia.com/wiki/Electrum</a></li>
-				<li>Servers list and status: <a href="http://electrum.be">http://electrum.be</a> (updated every 5 minutes)</li>
-			</ul>
-
-
-			<h3>Developers</h3>
-			<ul>
-			    <li>ThomasV - Creator and maintainer.</li>
-			    <li>Animazing - Styled the new GUI.</li>
-			    <li>Azelphur - GUI stuff.</li>
-			    <li>Coblee - Alternate coin support and py2app support.</li>
-			    <li>Deafboy - Ubuntu packages.</li>
-			    <li>EagleTM - Bugfixes.</li>
-			    <li>ErebusBat - Mac distribution.</li>
-			    <li>Genjix - Porting pro-mode functionality to lite-gui.</li>
-			    <li>Slush - Work on the server. Designed the original Stratum spec.</li>
-			    <li>Tuxavant - Various fixes to the client.</li>
-			</ul>
+			<p>The Electrum Bitcoin client uses a 128-bits random seed to generate its private keys.<p/>
+			
+			<p>The seed can be represented as a 12-words mnemonic code:
+			<br/><br/>
+			<img src="http://s3.ecdsa.org/seed.png" />
+			<br/>
+			<p/>
+			
+			<p>If you lose your wallet, it can be recovered at any time from the mnemonic code or from the seed:
+			<br/><br/>
+			<img src="http://s3.ecdsa.org/recover.png" /><br/>
+			<p/>
+			
+			<p>That's it! you no longer have to worry about wallet backups. All you need to remember is twelve words.</p>
 
 		</section><!-- /container -->
 	</body>
 </html>
-

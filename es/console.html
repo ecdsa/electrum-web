@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang=es>
+	<head>
+		<title>Electrum Bitcoin Client</title>
+		
+		<meta charset=utf-8 />
+		<meta name=description content="Lightweight Bitcoin Client" />
+		<meta name=keywords content="electrum,bitcoin,blockchain,lightweight,instant" />
+		<!--<meta name=viewport content="width=device-width, initial-scale=1.0" />-->
+		
+		<!--[if lt IE 9]>
+		<script type="text/javascript" src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+		
+		<!-- Styles -->
+		<link rel="stylesheet" type="text/css" href="../css/screen.css" />
+		<!-- /Styles -->
+
+		<!-- Links -->
+		<link rel="shortcut icon" href="favicon.ico" />
+		<link rel=apple-touch-icon-precomposed href=.png />
+		<link rel=author type=text/plain href=humans.txt>
+		<!-- /Links -->
+		
+		<!-- Analytics -->
+		
+		<!-- /Analytics -->
+			
+		<!-- js -->
+		<script src=https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js></script>
+		<script>
+		$(document).ready(function(){
+			$('#translations').load('langs_nav.html #langs_main');
+			$('#nav').load('langs_nav.html #nav_en');
+		});
+		$(window).bind("load", function() {
+		   $('a[href="es"]').removeAttr('href');
+		});
+		</script>
+		<!-- /js -->
+	</head>
+
+	<body>
+
+		<header>
+		    <div class="container">
+		    	<nav id=translations>
+			    	<!-- langs -->
+			    </nav>
+				<nav id=nav>
+					<!-- nav -->
+				</nav>
+				<div class=header>
+					<i id=electrum_logo><img src="media/electrum_logo.png" alt="Electrum" border="none" width="70" align="top" /></i>
+					<div id=logo><span><h1>Electrum</h1></span></div>
+					<h2>Lightweight Bitcoin Client</h2>
+				</div>
+		    </div>
+		</header>
+
+		<section class="container">
+			
+			<p>La mayoría de los comandos de Electrum están también disponibles en la consola.
+			<br/>
+			Los resultados son objetos de Python, a pesar de que aveces son mostrados como un JSON por claridad.</p>
+			
+			<p>Llamemos <tt>listunspent()</tt>, para ver la lista de los outputs sin gastar en la cartera:</p>
+			
+			<pre>
+>> listunspent()
+[
+    {
+        "address": "12cmY5RHRgx8KkUKASDcDYRotget9FNso3", 
+        "index": 0, 
+        "raw_output_script": "76a91411bbdc6e3a27c44644d83f783ca7df3bdc2778e688ac", 
+        "tx_hash": "e7029df9ac8735b04e8e957d0ce73987b5c9c5e920ec4a445130cdeca654f096", 
+        "value": 0.01
+    }, 
+    {
+        "address": "1GavSCND6TB7HuCnJSTEbHEmCctNGeJwXF", 
+        "index": 0, 
+        "raw_output_script": "76a914aaf437e25805f288141bfcdc27887ee5492bd13188ac", 
+        "tx_hash": "b30edf57ca2a31560b5b6e8dfe567734eb9f7d3259bb334653276efe520735df", 
+        "value": 9.04735316
+    }
+]</pre>
+			<p>Nótese que el resultado es mostrado como un JSON. <br/>
+			Pero, si lo guardamos como una variable de Python, resulta en un objeto de Python:</p>
+			
+			<pre>
+>> u = listunspent()
+>> u
+[{'tx_hash': u'e7029df9ac8735b04e8e957d0ce73987b5c9c5e920ec4a445130cdeca654f096', 'index': 0, 'raw_output_script': '76a91411bbdc6e3a27c44644d83f783ca7df3bdc2778e688ac', 'value': 0.01, 'address': '12cmY5RHRgx8KkUKASDcDYRotget9FNso3'}, {'tx_hash': u'b30edf57ca2a31560b5b6e8dfe567734eb9f7d3259bb334653276efe520735df', 'index': 0, 'raw_output_script': '76a914aaf437e25805f288141bfcdc27887ee5492bd13188ac', 'value': 9.04735316, 'address': '1GavSCND6TB7HuCnJSTEbHEmCctNGeJwXF'}]
+</pre>
+			<p><br/>
+			Esto permite combinar comandos de Electrum con Python.<br/>
+			Por ejemplo, tomemos solo las direcciones en el resultado anterior:</p>
+<pre>
+>> map(lambda x:x.get('address'), listunspent())
+[
+    "12cmY5RHRgx8KkUKASDcDYRotget9FNso3", 
+    "1GavSCND6TB7HuCnJSTEbHEmCctNGeJwXF"
+]</pre>
+			
+			<p>Aquí combinamos dos comandos, <tt>listunspent</tt> and <tt>dumpprivkeys</tt>, para sacar las llaves privadas de todas las direcciones en las que tenemos outputs sin gastas:</p>
+			
+			<pre>
+>> dumpprivkeys( map(lambda x:x.get('address'), listunspent()) )
+{
+    "12cmY5RHRgx8KkUKASDcDYRotget9FNso3": "***************************************************", 
+    "1GavSCND6TB7HuCnJSTEbHEmCctNGeJwXF": "***************************************************"
+}</pre>
+			
+			<p>Nótese que <tt>dumpprivkey</tt> pedirá tu contraseña si tu cartera está encriptada.</p>
+			
+			<p>Los métodos de la interfaz de usuario pueden accederse a través de la variable <tt>gui</tt>. Por ejemplo, puedes mostrar un código QR de una serie de carácteres usando <tt>gui.show_qrcode</tt>.
+			<br/><br/>
+			Example:</p>
+			
+			<pre>
+gui.show_qrcode(dumpprivkey(listunspent()[0]['address']))</pre>
+
+		</section><!-- /container -->
+	</body>
+</html>

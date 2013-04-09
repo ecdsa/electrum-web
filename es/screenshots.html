@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang=en>
+<html lang=es>
 	<head>
 		<title>Electrum Bitcoin Client</title>
 		
@@ -13,7 +13,7 @@
 		<![endif]-->
 		
 		<!-- Styles -->
-		<link rel="stylesheet" type="text/css" href="css/screen.css" />
+		<link rel="stylesheet" type="text/css" href="../css/screen.css" />
 		<!-- /Styles -->
 
 		<!-- Links -->
@@ -33,6 +33,9 @@
 			$('#translations').load('langs_nav.html #langs_main');
 			$('#nav').load('langs_nav.html #nav_en');
 		});
+		$(window).bind("load", function() {
+		   $('a[href="es"]').removeAttr('href');
+		});
 		</script>
 		<!-- /js -->
 	</head>
@@ -48,7 +51,7 @@
 					<!-- nav -->
 				</nav>
 				<div class=header>
-					<i id=electrum_logo><img src="media/electrum_logo.png" alt="Electrum" border="none" width="70" align="top" /></i>
+					<i id=electrum_logo><img src="../media/electrum_logo.png" alt="Electrum" border="none" width="70" align="top" /></i>
 					<div id=logo><span><h1>Electrum</h1></span></div>
 					<h2>Lightweight Bitcoin Client</h2>
 				</div>
@@ -57,14 +60,30 @@
 
 		<section class="container">
 			
-			<h3>Documentation</h3>
-
-			<ul>
-				<li><a href="tutorials.html">Step by step tutorials</a></li>
-				<li><a href="offline_wallets.html">How to sign a transaction with an offline Electrum wallet</a></li>
-				<li><a href="console.html">Console</a></li>
-				<li><a href="android.html">Android</a></li>
-			</ul>
+			<p>
+			<h3>Classic</h3>
+			<img src="../media/pro-mode.png" alt="electrum's Classic gui advanced-mode" />
+			</p>
+			
+			<p>
+			<h3>Lite</h3>
+			<img src="../media/litegui2.png" alt="electrum's Lite gui" />
+			</p>
+			
+			<p>
+			<h3>Gtk</h3>
+			
+			</p>
+			
+			<p>
+			<h3>Android</h3>
+			
+			</p>
+			
+			<p>
+			<h3>Text</h3>
+			<!--<img src="../media/textgui.png" alt="electrum's Text gui" />-->
+			</p>
 
 		</section><!-- /container -->
 	</body>
