@@ -452,3 +452,4 @@ nav#translations { margin-top:0 !important; }
 
 section.container { text-align:justify; }
 
+hr + h4 { padding-top:20px; }
