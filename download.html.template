@@ -90,14 +90,14 @@
 		      <span style="font-size:x-small">signed by <a href="http://bitcoin-otc.com/viewgpg.php?nick=Animazing">Animazing</a></span>
 		    </td>
 		    <td>
-		      <a href="http://download.electrum.org/download/Electrum-##VERSION_WIN##.exe">Standalone Executable</a> 
-		      <span style="font-size:80%">(md5:##md5_win##; <a href="http://download.electrum.org/download/Electrum-##VERSION_WIN##.exe.asc">signature</a>)</span>
+		      <a href="http://download.electrum.org/download/electrum-##VERSION_WIN##.exe">Standalone Executable</a> 
+		      <span style="font-size:80%">(md5:##md5_win##; <a href="http://download.electrum.org/download/electrum-##VERSION_WIN##.exe.asc">signature</a>)</span>
 		      <br/>
-		      <a href="http://download.electrum.org/download/Electrum-##VERSION_WIN##-setup.exe">Windows Installer</a>
-		      <span style="font-size:80%">(md5:##md5_win_setup##; <a href="http://download.electrum.org/download/Electrum-##VERSION_WIN##-setup.exe.asc">signature</a>)</span>
+		      <a href="http://download.electrum.org/download/electrum-##VERSION_WIN##-setup.exe">Windows Installer</a>
+		      <span style="font-size:80%">(md5:##md5_win_setup##; <a href="http://download.electrum.org/download/electrum-##VERSION_WIN##-setup.exe.asc">signature</a>)</span>
 		      <br/>
-		      <a href="http://download.electrum.org/download/Electrum-##VERSION_WIN##-portable.exe">Portable version</a>
-		      <span style="font-size:80%">(md5:##md5_win_portable##; <a href="http://download.electrum.org/download/Electrum-##VERSION_WIN##-portable.exe.asc">signature</a>) (<a href="https://bitcointalk.org/index.php?topic=154451.0">security advice</a>)</span>
+		      <a href="http://download.electrum.org/download/electrum-##VERSION_WIN##-portable.exe">Portable version</a>
+		      <span style="font-size:80%">(md5:##md5_win_portable##; <a href="http://download.electrum.org/download/electrum-##VERSION_WIN##-portable.exe.asc">signature</a>) (<a href="https://bitcointalk.org/index.php?topic=154451.0">security advice</a>)</span>
 		
 		
 		    </td>
