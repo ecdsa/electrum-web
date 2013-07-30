@@ -69,9 +69,18 @@
 		<section class="container">
 			
 			<h3>Tutoriales paso a paso</h3>
+						
+			<ul>
+				<li><a href="#why-electrum">¿Por qué Electrum?</a></li>
+				<li><a href="#starting-up">Empezando</a></li>
+				<li><a href="#restoring-seed">Restaurar la cartera con tu semilla. Crear una cartera sin semilla.</a></li>
+				<!--<li><a href="#offline-mpk">How to make offline transactions using your Master Public Key</a></li>-->
+				<li><a href="#switching-to-electrum">¿Qué hacer con mis direcciones y cartera anteriores cuando cambie a Electrum?</a></li>
+			</ul>
 			
-			<br />
-			<h4>¿Por qué Electrum?</h4>
+			<hr>
+			
+			<h4 id="why-electrum">¿Por qué Electrum?</h4>
 			<ul>
 				<li>Instantáneo: Tu cliente no tiene que descargar la cadena de bloques, usa un servidor remoto.</li>
 				<li>Olvidar: Tu cartera puede ser recuperada desde una <a href="seed.html">semilla</a> secreta.</li>
@@ -82,8 +91,9 @@
 				<li>Probado y auditado: Electrum es de código abierto y fue presentado por primera vez en Noviembre de 2011.</li>
 			</ul>
 			
-			<br />
-			<h4>Empezando</h4>
+			<hr>
+			
+			<h4 id="starting-up">Empezando</h4>
 			<ul>
 				<li>Una vez que hayas descargado e iniciado Electrum por primera vez te pedirá que crees una cartera.</li>
 				<li>Selecciona un servidor de la lista y selecciona OK.</li>
@@ -93,7 +103,9 @@
 				<li>Nuevas direcciones son generadas automáticamente cuando tus direcciones entrantes son usadas.</li>
 			</ul>
 			
-			<h4>Restaurar la cartera con tu semilla. Crear una cartera sin semilla.</h4>
+			<hr>
+			
+			<h4 id="restoring-seed">Restaurar la cartera con tu semilla. Crear una cartera sin semilla.</h4>
 			<ul>
 				<li>Si has perdido tu cartera de Electrum puedes restaurarla con tu semilla.</li>
 				<li>Inicia Electrum y selecciona la opción restaurar, introduce tu semilla y deja el límite de direcciones vacías predeterminado si no lo cambiaste en tu Electrum anterior.</li>
@@ -104,9 +116,13 @@
 				<li>Para crear una cartera sin semilla inicia Electrum, selecciona la opción restaurar e introduce tu Llave Pública Maestra en lugar de tu semilla.</li>
 				<li>Puedes usar carteras sin semilla en Terminales de Punto de Venta</li>
 			</ul>
-						
-			<br />		
-			<h4>¿Qué hacer con mis direcciones y cartera anteriores cuando cambie a Electrum?</h4>
+			
+			<hr>
+		
+			<h4 id="switching-to-electrum">¿Qué hacer con mis direcciones y cartera anteriores cuando cambie a Electrum?</h4>
+			<p>La mejor forma de cambiar a Electrum es enviar todos los bitcoins que tengas en tu cartera anterior a una de las direcciones de tu cartera de Electrum. De esta forma tendrás todos tus bitcoins seguros con tu semilla.</p>
+			
+			<p>Podrías importar las llaves privadas desde tu cartera anterior, pero deberás de mantener una copia de seguridad de esas llaves de forma separada ya que no serán parte de tu semilla de Electrum.</p>
 
 		</section><!-- /container -->
 	</body>
