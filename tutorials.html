@@ -122,7 +122,12 @@
 				<li><em>[Offline PC]</em> Install Electrum via a USB-Key.</li>
 				<li><em>[Offline PC]</em> Create a new wallet. Write down the seed and memorize it, after which you should probably destroy the seed or keep it safe in a lockbox.</li>
 				<li><em>[Offline PC]</em> Go to Settings -> Import/Export and copy your "Master Public Key" and put it in a text file on your USB-Key.</li>
-				<li><em>[Online PC]</em> Install Electrum and select restore, use the "Master Public Key".</li> 
+				<li><em>[Online PC]</em> Install Electrum and select <i>Restore</i> in the dialog box shown on the first start up, use the "Master Public Key".</li> 
+				<li><em>[Online PC, existing Electrum install]</em>If you have an existing Electrum installation running you can switch to another wallet by starting Eletcrum with <code>-w</code> switch from command line. OSX example:</li>
+				<pre>
+					cd /Applications/Electrum.app/Contents/MacOS
+					./Electrum -w your-new-wallet-file	
+				</pre>
 			</ul>
 			
 			<p>You now have an online wallet where you can check your balances and give out new addresses, but you can't however spend the coins. So if an attacker would be able take over your online computer your coins can't be lost.</p>
