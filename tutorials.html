@@ -124,7 +124,7 @@
 				<li><em>[Offline PC]</em> Create a new wallet. Write down the seed and memorize it, after which you should probably destroy the seed or keep it safe in a lockbox.</li>
 				<li><em>[Offline PC]</em> Go to Settings -> Import/Export and copy your "Master Public Key" and put it in a text file on your USB-Key.</li>
 				<li><em>[Online PC]</em> Install Electrum and select <i>Restore</i> in the dialog box shown on the first start up, use the "Master Public Key".</li>
-				<li><em>[Online PC, existing Electrum install] See below how to put Electrium to a state you can restore wallet.</em>
+				<li><em>[Online PC, existing Electrum installation] See below how to make Electrum to restore or open alternative, non-default, wallet.</em>
 			</ul>
 
 			<p>You now have an online wallet where you can check your balances and give out new addresses, but you can't however spend the coins. So if an attacker would be able take over your online computer your coins can't be lost.</p>
@@ -149,24 +149,21 @@
             <h4 id="switching-wallet">Switching, creating or restoring wallet</h4>
 
             <p>
-                You might need to restore Electrum GUI to the pristine installation state where wallet was not created yet
-                e.g. to use wallet restoring functionality. You can do this by starting Electrum from command line
-                and giving it non-existing wallet file.
+                You might want to open an alternative wallet or restore another wallet. Currently Electrum main user interface does not support this, but you can do this by starting Electrum from command line
+                and pointing it to the wallet file. If the wallet does not exist it is created or restored.
             </p>
 
             <p>Example (OSX, .dmg installation):</p>
 
-            <pre>
-cd /Applications/Electrum.app/Contents/MacOS
-./Electrum -w your-new-wallet-file
-            </pre>
+<pre>cd /Applications/Electrum.app/Contents/MacOS
+./Electrum -w ~/path/to/your-new-wallet-file</pre>
 
-            <p>To switch back to your default wallet:</p>
+            <p>To switch back to your default wallet start Elecrum without <code>-w parameter</code></p>
 
-            <pre>
-cd /Applications/Electrum.app/Contents/MacOS
-./Electrum -w ~/.electrum/electrum.dat
-            </pre>
+            <pre>cd /Applications/Electrum.app/Contents/MacOS
+./Electrum</pre>
+
+            <p>(Or just launch Electrum from the application icon.)</p>
 
 		</section><!-- /container -->
 	</body>
