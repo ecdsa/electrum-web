@@ -30,8 +30,8 @@
 		<script src=https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js></script>
 		<script>
 		$(document).ready(function(){
-			$('#translations').load('langs_nav.html #langs_main');
-			$('#nav').load('langs_nav.html #nav_en');
+			$('#translations').load('../langs_nav.html #langs_subdir');
+			$('#nav').load('../langs_nav.html #nav_es');
 		});
 		$(window).bind("load", function() {
 		   $('a[href="es"]').removeAttr('href');
@@ -59,7 +59,7 @@
 					<!-- /DON'T MODIFY end -->
 				</nav>
 				<div class=header>
-					<i id=electrum_logo><img src="media/electrum_logo.png" alt="Electrum" border="none" width="70" align="top" /></i>
+					<i id=electrum_logo><img src="../media/electrum_logo.png" alt="Electrum" border="none" width="70" align="top" /></i>
 					<div id=logo><span><h1>Electrum</h1></span></div>
 					<h2>Lightweight Bitcoin Client</h2>
 				</div>
