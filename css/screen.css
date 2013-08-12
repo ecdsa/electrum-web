@@ -428,6 +428,9 @@ h3 {
     position:absolute;
     margin:0px 0px;
 }
+a, a:visited { text-decoration:none; }
+a:hover, a:active, a:focus { text-decoration:underline; }
+a:active { position:relative; top:1px; }
 
 body { padding-bottom:10px; background-color:#ddd; }
 
@@ -477,3 +480,15 @@ nav#translations { margin-top:0 !important; }
 section.container { text-align:justify; }
 
 hr + h4 { padding-top:20px; }
+
+.button {
+	padding: 10px 30px;
+	color:#fff;
+	background-color:#3498db;
+	font-weight:300;
+	text-decoration:none;
+	border-radius:6px;
+	}
+	.button:visited { color:#fff; }
+	.button:hover, .button:active, .button:focus { color:#fff; text-decoration:underline; }
+	.button:active { position:relative; top:1px; }
