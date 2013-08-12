@@ -1,3 +1,22 @@
+@font-face {
+  font-family: 'Ubuntu';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Ubuntu Light'), local('Ubuntu-Light'), url(fonts/_aijTyevf54tkVDLy-dlnLO3LdcAZYWl9Si6vvxL-qU.woff) format('woff');
+}
+@font-face {
+  font-family: 'Ubuntu';
+  font-style: normal;
+  font-weight: 500;
+  src: local('Ubuntu Medium'), local('Ubuntu-Medium'), url(fonts/OsJ2DjdpjqFRVUSto6IffLO3LdcAZYWl9Si6vvxL-qU.woff) format('woff');
+}
+@font-face {
+  font-family: 'Ubuntu';
+  font-style: italic;
+  font-weight: 300;
+  src: local('Ubuntu Light Italic'), local('Ubuntu-LightItalic'), url(fonts/DZ_YjBPqZ88vcZCcIXm6VrrIa-7acMAeDBVuclsi6Gc.woff.woff) format('woff');
+}
+
 /* Welcome to Compass.
  * In this file you should write your main styles. (or centralize your imports)
  * Import this file using the following HTML or equivalent:
@@ -70,7 +89,8 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 /* line 33, ../../../../.rvm/gems/ruby-1.9.3-p194/gems/compass-0.12.1/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
 body {
   line-height: 1.5;
-  font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
+  font-family: Ubuntu, "Helvetica Neue", Arial, Helvetica, sans-serif;
+  font-weight:300;
   color: #333333;
   font-size: 75%;
 }
@@ -370,7 +390,7 @@ header ul {
 /* line 52, ../_sass/screen.sass */
 header ul li {
   float: left;
-  font-weight: bold;
+  font-weight: 300;
   margin-right: 15px;
   font-size: 11pt;
   color: #3484e6;
@@ -419,6 +439,7 @@ header nav {
 	float:right;
 	display:block;
 	clear:right;
+	font-weight:300;
 }
 
 .header {
@@ -435,7 +456,10 @@ header nav {
 		}
 		#logo span, #electrum_logo img { position:absolute; top:100%; left:-99999px; }
 	
-	.header h2 { margin-top:45px; }
+	.header h2 {
+		margin-top:45px; 
+		font-weight:300;
+	}
 	
 	#electrum_logo {
 		width:70px;
@@ -448,7 +472,7 @@ header nav {
 	}
 
 nav#translations { margin-top:0 !important; }
-.translations a { font-weight:normal; }
+.translations a { font-weight: 300; }
 
 section.container { text-align:justify; }
 
