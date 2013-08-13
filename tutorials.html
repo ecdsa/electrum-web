@@ -2,16 +2,16 @@
 <html lang=en>
 	<head>
 		<title>Electrum Bitcoin Client</title>
-		
+
 		<meta charset=utf-8 />
 		<meta name=description content="Lightweight Bitcoin Client" />
 		<meta name=keywords content="electrum,bitcoin,blockchain,lightweight,instant" />
 		<!--<meta name=viewport content="width=device-width, initial-scale=1.0" />-->
-		
+
 		<!--[if lt IE 9]>
 		<script type="text/javascript" src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 		<![endif]-->
-		
+
 		<!-- Styles -->
 		<link rel="stylesheet" type="text/css" href="css/screen.css" />
 		<!-- /Styles -->
@@ -21,11 +21,11 @@
 		<link rel=apple-touch-icon-precomposed href=.png />
 		<link rel=author type=text/plain href=humans.txt>
 		<!-- /Links -->
-		
+
 		<!-- Analytics -->
-		
+
 		<!-- /Analytics -->
-			
+
 		<!-- js -->
 		<script src=https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js></script>
 		<script>
@@ -62,21 +62,22 @@
 				</div>
 		    </div>
 		</header>
-		
+
 		<section class="container">
-		
+
 			<h3>Step by step tutorials</h3>
-			
+
 			<ul>
 				<li><a href="#why-electrum">Why Electrum?</a></li>
 				<li><a href="#starting-up">Starting up</a></li>
 				<li><a href="#restoring-seed">Restoring wallet from your seed. Creating a seedless wallet</a></li>
 				<li><a href="#offline-mpk">How to make offline transactions using your Master Public Key</a></li>
 				<li><a href="#switching-to-electrum">What to do with my old addresses and wallet when switching to Electrum?</a></li>
+                <li><a href="#switching-wallet">Switching, creating or restoring wallet</a></li>
 			</ul>
-			
+
 			<hr>
-			
+
 			<h4 id="why-electrum">Why Electrum?</h4>
 			<ul>
 				<li>Instant on: Your client does not download the blockchain, it uses a remote server.</li>
@@ -87,9 +88,9 @@
 				<li>Open: You can export your private keys into other Bitcoin clients.</li>
 				<li>Tested and audited: Electrum is open source and was first released in November 2011.</li>
 			</ul>
-			
+
 			<hr>
-			
+
 			<h4 id="starting-up">Starting up</h4>
 			<ul>
 				<li>Once you've downloaded and started Electrum for the first time you'll be asked to create a wallet.</li>
@@ -99,9 +100,9 @@
 				<li>Now you can start using Electrum to send and receive Bitcoins.</li>
 				<li>New addresses are generated automatically when your receiving addresses are used.</li>
 			</ul>
-			
+
 			<hr>
-			
+
 			<h4 id="restoring-seed">Restoring wallet from your seed. Creating a seedless wallet</h4>
 			<ul>
 				<li>If you've lost your Electrum wallet you can restore it from your seed.</li>
@@ -113,34 +114,56 @@
 				<li>To create a seedless wallet start Electrum, select the restore option and enter your Master Public Key instead of your seed.</li>
 				<li>You can use seedless wallets in Point Of Sale systems.</li>
 			</ul>
-			
+
 			<hr>
-			
+
 			<h4 id="offline-mpk">How to make offline transactions using your Master Public Key</h4>
 			<p>Get an offline computer. This can be a physical device or a separate installation on your current computer. I would advice a Debian installation with encrypted home folder for extra security.</p>
-			<ul>	
+			<ul>
 				<li><em>[Offline PC]</em> Install Electrum via a USB-Key.</li>
 				<li><em>[Offline PC]</em> Create a new wallet. Write down the seed and memorize it, after which you should probably destroy the seed or keep it safe in a lockbox.</li>
 				<li><em>[Offline PC]</em> Go to Settings -> Import/Export and copy your "Master Public Key" and put it in a text file on your USB-Key.</li>
-				<li><em>[Online PC]</em> Install Electrum and select restore, use the "Master Public Key".</li> 
+				<li><em>[Online PC]</em> Install Electrum and select <i>Restore</i> in the dialog box shown on the first start up, use the "Master Public Key".</li>
+				<li><em>[Online PC, existing Electrum installation] See below how to make Electrum to restore or open alternative, non-default, wallet.</em>
 			</ul>
-			
+
 			<p>You now have an online wallet where you can check your balances and give out new addresses, but you can't however spend the coins. So if an attacker would be able take over your online computer your coins can't be lost.</p>
-			
+
 			<p>To make a transaction do the following:</p>
-			
+
 			<ul>
 				<li><em>[Online PC]</em> Go to the send tab and make a transaction. Instead of sending it, Electrum will detect a seedless wallet and query for a location to save the transaction. Select your USB-Key.</li>
 				<li><em>[Offline PC]</em> Go to Settings -> Import/Export -> "Load raw transaction". Select your transaction from the USB-Key. It will detect it's not signed and will prompt you to do so now. Fill in your password and sign the transaction. Save the new, signed, transaction to your USB-Key.</li>
 				<li><em>[Online PC]</em> Go to Settings -> Import/Export -> "Load raw transaction". Select the signed transaction and it will ask you if you want to broadcast it.</li>
 			</ul>
-			
+
 			<hr>
-						
+
 			<h4 id="switching-to-electrum">What to do with my old addresses and wallet when switching to Electrum?</h4>
 			<p>The best way to switch to Electrum is to send all the bitcoins you have on your old wallet to one of the addresses on your Electrum wallet. This way you'll have all your bitcoins secured with your seed.</p>
-			
+
 			<p>You could import the private keys from your old client, but you will have to keep a backup of those keys separately as they won't become part of your Electrum seed.</p>
+
+            <hr>
+
+            <h4 id="switching-wallet">Switching, creating or restoring wallet</h4>
+
+            <p>
+                You might want to open an alternative wallet or restore another wallet. Currently Electrum main user interface does not support this, but you can do this by starting Electrum from command line
+                and pointing it to the wallet file. If the wallet does not exist it is created or restored.
+            </p>
+
+            <p>Example (OSX, .dmg installation):</p>
+
+<pre>cd /Applications/Electrum.app/Contents/MacOS
+./Electrum -w ~/path/to/your-new-wallet-file</pre>
+
+            <p>To switch back to your default wallet start Elecrum without <code>-w parameter</code></p>
+
+            <pre>cd /Applications/Electrum.app/Contents/MacOS
+./Electrum</pre>
+
+            <p>(Or just launch Electrum from the application icon.)</p>
 
 		</section><!-- /container -->
 	</body>
