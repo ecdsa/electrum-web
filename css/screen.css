@@ -481,12 +481,13 @@ hr + h4 { padding-top:20px; }
 	text-decoration:none;
 	text-align:center;
 	}
-	.alert span {
+	.alert span.info-icon::after {
+		content:"i";
 		margin-right:10px;
-		padding:0 4px;
+		padding:2px 6px;
 		display:inline-block;
 		border: 1px solid #00468b;
-		border-radius:10px;
+		border-radius:16px;
 		font: 1em "andale mono", "lucida console", monospace;
 		
 		transform: scale(.8);
