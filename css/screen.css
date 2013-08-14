@@ -473,3 +473,32 @@ hr + h4 { padding-top:20px; }
 	.button:visited { color:#fff; }
 	.button:hover, .button:active, .button:focus { color:#fff; text-decoration:underline; }
 	.button:active { position:relative; top:1px; }
+	
+.alert {
+	color:#00468b;
+	background-color:#3498db;
+	font-weight:300;
+	text-decoration:none;
+	text-align:center;
+	}
+	.alert span {
+		margin-right:10px;
+		padding:0 4px;
+		display:inline-block;
+		border: 1px solid #00468b;
+		border-radius:10px;
+		font: 1em "andale mono", "lucida console", monospace;
+		
+		transform: scale(.8);
+		-ms-transform: scale(.8); /* IE 9 */
+		-webkit-transform: scale(.8); /* Safari and Chrome */
+		
+		text-shadow:rgba(255,255,255,.4) 0 1px 1px;
+		box-shadow:rgba(255,255,255,.4) 0 1px 1px;
+	 }
+	.alert p { margin:0; padding:5px 0; text-shadow:rgba(255,255,255,.4) 0 1px 1px; }
+	.alert a { margin-left:10px; color:#fff; text-shadow:none; }
+	.alert a:hover, .alert a:active, .alert a:focus { color:#fff; text-decoration:underline; }
+		.button:active { position:relative; top:1px; }
+
+small { font-size:.9375rem; }
