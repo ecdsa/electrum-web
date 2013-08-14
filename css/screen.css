@@ -484,7 +484,7 @@ hr + h4 { padding-top:20px; }
 	.alert span.info-icon::after {
 		content:"i";
 		margin-right:10px;
-		padding:2px 6px;
+		padding:0 4px;
 		display:inline-block;
 		border: 1px solid #00468b;
 		border-radius:16px;
