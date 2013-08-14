@@ -370,7 +370,7 @@ header ul {
 /* line 52, ../_sass/screen.sass */
 header ul li {
   float: left;
-  font-weight: bold;
+  font-weight: normal;
   margin-right: 15px;
   font-size: 11pt;
   color: #3484e6;
@@ -409,6 +409,10 @@ h3 {
     margin:0px 0px;
 }
 
+a, a:visited { text-decoration:none; }
+a:hover, a:active, a:focus { text-decoration:underline; }
+a:active { position:relative; top:1px; }
+
 body { padding-bottom:10px; background-color:#ddd; }
 
 header ul, header ol {
@@ -419,6 +423,7 @@ header nav {
 	float:right;
 	display:block;
 	clear:right;
+	font-weight:300;
 }
 
 .header {
@@ -435,7 +440,10 @@ header nav {
 		}
 		#logo span, #electrum_logo img { position:absolute; top:100%; left:-99999px; }
 	
-	.header h2 { margin-top:45px; }
+	.header h2 {
+		margin-top:45px; 
+		font-weight:300;
+	}
 	
 	#electrum_logo {
 		width:70px;
@@ -448,8 +456,49 @@ header nav {
 	}
 
 nav#translations { margin-top:0 !important; }
-.translations a { font-weight:normal; }
+.translations a { font-weight: 300; }
 
 section.container { text-align:justify; }
 
 hr + h4 { padding-top:20px; }
+
+.button {
+	padding: 10px 30px;
+	color:#fff;
+	background-color:#3498db;
+	font-weight:300;
+	text-decoration:none;
+	border-radius:6px;
+	}
+	.button:visited { color:#fff; }
+	.button:hover, .button:active, .button:focus { color:#fff; text-decoration:underline; }
+	.button:active { position:relative; top:1px; }
+	
+.alert {
+	color:#00468b;
+	background-color:#3498db;
+	font-weight:300;
+	text-decoration:none;
+	text-align:center;
+	}
+	.alert span {
+		margin-right:10px;
+		padding:0 4px;
+		display:inline-block;
+		border: 1px solid #00468b;
+		border-radius:10px;
+		font: 1em "andale mono", "lucida console", monospace;
+		
+		transform: scale(.8);
+		-ms-transform: scale(.8); /* IE 9 */
+		-webkit-transform: scale(.8); /* Safari and Chrome */
+		
+		text-shadow:rgba(255,255,255,.4) 0 1px 1px;
+		box-shadow:rgba(255,255,255,.4) 0 1px 1px;
+	 }
+	.alert p { margin:0; padding:5px 0; text-shadow:rgba(255,255,255,.4) 0 1px 1px; }
+	.alert a { margin-left:10px; color:#fff; text-shadow:none; }
+	.alert a:hover, .alert a:active, .alert a:focus { color:#fff; text-decoration:underline; }
+		.button:active { position:relative; top:1px; }
+
+small { font-size:.9375rem; }

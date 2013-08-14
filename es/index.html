@@ -19,7 +19,7 @@
 		<!-- Links -->
 		<link rel="shortcut icon" href="favicon.ico" />
 		<link rel=apple-touch-icon-precomposed href=.png />
-		<link rel=author type=text/plain href=humans.txt>
+		<link rel=author type=text/plain href=../humans.txt>
 		<!-- /Links -->
 		
 		<!-- Analytics -->
@@ -41,7 +41,9 @@
 	</head>
 
 	<body>
-
+	
+	<div class="alert"><p><span>i</span><small>Si tu cliente Electrum no actualiza las transacciones, por favor cambia el servidor a electrum.be, electrum.no-ip.org or electrum.pdmc.net <a href="https://bitcointalk.org/index.php?topic=271761" target="_blank"><em>leer más</em></a></small></p></div>
+	
 	<header>
 	    <div class="container">
 	    	<nav id=translations>
@@ -59,7 +61,7 @@
 				<!-- /DON'T MODIFY end -->
 			</nav>
 			<div class=header>
-				<i id=electrum_logo><img src="media/electrum_logo.png" alt="Electrum" border="none" width="70" align="top" /></i>
+				<i id=electrum_logo><img src="../media/electrum_logo.png" alt="Electrum" border="none" width="70" align="top" /></i>
 				<div id=logo><span><h1>Electrum</h1></span></div>
 				<h2>Lightweight Bitcoin Client</h2>
 			</div>
@@ -68,16 +70,19 @@
 
 		<section class="container">
 			
-			<figure><img src="../media/litegui2.png" alt="Electrum" border="none" align="right"
-			style="padding:0px;"/></figure>
+			<figure style="text-align:center;"><img src="../media/splash_electrum_gui.png" alt="Electrum" border="none"/></figure>
 			
+			<br />
+			
+			<p style="margin:0 auto; padding:0 100px; text-align:center;">Electrum es un cliente Bitcoin fácil de usar. Te protege de perder tus bitcoins si cometes un error al crear copias de seguridad o tu ordenador falla, porque tu cartera puede ser recuperada desde una frase secreta que puedes escribir en un papel o aprender de memoria. No hay esperas cuando inicias el cliente, porque no se descarga la cadena de bloques de Bitcoin.</p>
+			
+			<br />
+			
+			<p style="text-align:center;"><a href="#features" class="button">¿Por qué Electrum?</a></p>
+						
 			<br /><br />
 			
-			<p>Electrum es un cliente Bitcoin fácil de usar. Te protege de perder tus monedas si cometes un error al crear copias de seguridad o tu ordenador falla, porque tu cartera puede ser recuperada desde una frase secreta que puedes escribir en un papel o aprender de memoria. No hay esperas cuando inicias el cliente, porque no se descarga la cadena de bloques de Bitcoin.</p>
-			
-			<br /><br />
-			
-			<h3>Características:</h3>
+			<h3 id="features">Características:</h3>
 			
 			<ul>
 				<li>Instantáneo: Tu cliente no tiene que descargar la cadena de bloques, usa un servidor remoto.</li>
@@ -88,7 +93,9 @@
 				<li>Abierto: Puedes exportar tus llaves privadas a otros clientes Bitcoin.</li>
 				<li>Probado y auditado: Electrum es de código abierto y fue presentado por primera vez en Noviembre de 2011.</li>
 			</ul>
+			
 			<br />
+			
 			<h3>Interfaces de usuarios</h3>
 			
 			<p>Electrum tiene muchas interfaces gráficas, que comparten la misma cartera: Clásico (Qt), Lite, Gtk, Android, Texto (usando Curses). Ve a <a href="screenshots.html">capturas de pantalla</a> para ver algunos ejemplos.</p>
