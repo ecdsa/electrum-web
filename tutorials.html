@@ -73,7 +73,7 @@
 				<li><a href="#restoring-seed">Restoring wallet from your seed. Creating a seedless wallet</a></li>
 				<li><a href="#offline-mpk">How to make offline transactions using your Master Public Key</a></li>
 				<li><a href="#switching-to-electrum">What to do with my old addresses and wallet when switching to Electrum?</a></li>
-                <li><a href="#switching-wallet">Switching, creating or restoring wallet</a></li>
+                <li><a href="#switching-wallets">witching, creating or restoring multiple wallet files</a></li>
 			</ul>
 
 			<hr>
@@ -146,22 +146,21 @@
 
             <hr>
 
-            <h4 id="switching-wallet">Switching, creating or restoring wallet</h4>
+            <h4 id="switching-wallets">Switching, creating or restoring multiple wallet files</h4>
 
-            <p>
-                You might want to open an alternative wallet or restore another wallet. Currently Electrum main user interface does not support this, but you can do this by starting Electrum from command line
-                and pointing it to the wallet file. If the wallet does not exist it is created or restored.
-            </p>
+            <p>You might want to open an alternative wallet or restore another wallet. You can do this by starting Electrum from command line and pointing it to the wallet file. If the wallet does not exist it is created or restored.</p>
 
-            <p>Example (OSX, .dmg installation):</p>
+            <p>Example (executable for OSX):</p>
 
 <pre>cd /Applications/Electrum.app/Contents/MacOS
 ./Electrum -w ~/path/to/your-new-wallet-file</pre>
 
-            <p>To switch back to your default wallet start Elecrum without <code>-w</code> parameter (or just launch from the application icon).</p>
+            <p>To switch back to your default wallet start Electrum without <code>-w</code> parameter (or just launch from the application icon).</p>
 
 <pre>cd /Applications/Electrum.app/Contents/MacOS
 ./Electrum</pre>
+
+			<p>Once multiple wallet files exist you can switch between them using the open wallet feature going to File > Open wallet</p>
 
 		</section><!-- /container -->
 	</body>
