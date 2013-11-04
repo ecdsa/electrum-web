@@ -128,9 +128,9 @@
 		      <span style="font-size:x-small">signed by <a href="http://bitcoin-otc.com/viewgpg.php?nick=Animazing">Animazing</a></span></td>
 		    </td>
 		    <td>
-		    <a href="http://download.electrum.org/electrum-v##VERSION_MAC##.dmg">Executable
+		    <a href="http://download.electrum.org/electrum-##VERSION_MAC##.dmg">Executable
 		      for OS X</a> 
-		      <span style="font-size:80%">(md5:##md5_mac##; <a href="http://download.electrum.org/electrum-v##VERSION_MAC##.dmg.asc">signature</a>)</span>
+		      <span style="font-size:80%">(md5:##md5_mac##; <a href="http://download.electrum.org/electrum-##VERSION_MAC##.dmg.asc">signature</a>)</span>
 		    </td>
 		  </tr>
 		  <tr>
