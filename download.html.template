@@ -85,6 +85,7 @@
 		    <td>
 		      <ul>
 			<li>Install python-qt4 and pip:<br/><tt>sudo apt-get install python-qt4 python-pip</tt></li>
+			<li>On Ubuntu 13.10 do:<br/><tt>sudo apt-get install python-slowaes</tt></li>
 			<li>Install electrum:<br/>
 		        <tt style="font-size:75%">sudo pip install http://download.electrum.org/Electrum-##VERSION##.tar.gz#md5=##md5_tgz##</tt></li>
 			<li>Run:<br/><tt>electrum</tt></li>
