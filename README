@@ -1,56 +1,10 @@
 Electrum - lightweight Bitcoin client
 
-elecrtum-web
+electrum-web
 
 
 == TRANSLATIONS ==
 
-To be able to translate the website to your local language you need to:
+To be able to translate the website to your local language you need to join the Crowdin.net project at https://crowdin.net/project/electrum
 
-- fork the electrum-web repository
-- duplicate and rename the 'es' folder
-- edit the 'langs_nav.html'
-	
-<!-- website's languages -->
-	.
-	.
-	.
-	<li><a href="es">es</a></li>
-	</small>
-
-- add the new language to the two parts right before the '</small>' tag
-- in the nav section duplicate the 'nav_es' block and make your changes to the new copy
-
-<!-- website's nav -->
-<ul id=nav_es class=nav>
-	<li><a href="index.html">Inicio</a></li>
-	<li><a href="../download.html">Descargar</a></li>
-	<li><a href="documentation.html">Documentación</a></li>
-	<li><a href="community.html">Comunidad</a></li>
-</ul>
-
-- Translate only the content parts, make sure to change the 'id=nav_es' to your language in the new copy, for example 'id=nav_jp'
-
-
-####### on each html file inside the new language folder, 'jp'
-
-- change the first '<html lang=es>' to your language
-- go to the javascript in the head section (<head>...</head>) and change the two 'es' of these two parts of the jQuery
-
-	<!-- js -->
-	.
-	.
-	.
-		$('#nav').load('../langs_nav.html #nav_es');
-	.
-	.
-	.
-	   $('a[href="es"]').removeAttr('href');
-	});
-	</script>
-	<!-- /js -->
-	
-	
-== NOTES ==
-
-We recommend to use a copy of the 'es' folder and follow the instructions above to make your local translation, rather than copying the English files because content's URLs are already set for a subfolder.
+If your language is missing, ask for it to be added at the IRC #electrum channel directly to ' rdymac ' or in this forum post https://bitcointalk.org/index.php?topic=330279
