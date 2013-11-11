@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang=es>
+<html lang=fr>
 	<head>
 		<title>Electrum Bitcoin Client</title>
 		
@@ -31,18 +31,17 @@
 		<script>
 		$(document).ready(function(){
 			$('#translations').load('../langs_nav.html #langs_subdir');
-			$('#nav').load('../langs_nav.html #nav_es');
+			$('#nav').load('../langs_nav.html #nav_fr');
 		});
 		$(window).bind("load", function() {
-		   $('a[href="../es"]').removeAttr('href');
+		   $('a[href="../fr"]').removeAttr('href');
 		});
 		</script>
 		<!-- /js -->
 	</head>
 
 	<body>
-
-	<header>
+		<header>
 		    <div class="container">
 		    	<nav id=translations>
 			    	<!-- langs -->
@@ -67,15 +66,18 @@
 		</header>
 
 		<section class="container">
+			<p>Le client Bitcoin Electrum utilise une graine aléatoire de 128 bits pour générer ses clés privées.<p/>
 			
-			<h3>Documentacón</h3>
-
-			<ul>
-				<li><a href="tutorials.html">Tutoriales paso a paso</a></li>
-				<li><a href="offline_wallets.html">Como firmar una transacción con una cartera sin conexión de Electrum</a></li>
-				<li><a href="console.html">Consola</a></li>
-				<li><a href="android.html">Android</a></li>
-			</ul>
+			<p>La graine peut être représentée comme un code mnémonique à 12 mots :<br/><br/>
+			<img src="http://s3.ecdsa.org/seed.png" />
+			<br/>
+			<p/>
+			
+			<p>Si vous perdez votre portefeuille, vous pouvez le récupérer à tout moment à partir du code mnémonique ou de la graine :<br/><br/>
+			<img src="http://s3.ecdsa.org/recover.png" /><br/>
+			<p/>
+			
+			<p>Et voilà ! Vous n'avez plus à vous soucier des sauvegardes de portefeuille. Tout ce que vous avez à faire est de vous rappeler de ces douze mots.</p>
 
 		</section><!-- /container -->
 	</body>

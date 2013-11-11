@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang=es>
+<html lang=de>
 	<head>
 		<title>Electrum Bitcoin Client</title>
 		
@@ -31,10 +31,10 @@
 		<script>
 		$(document).ready(function(){
 			$('#translations').load('../langs_nav.html #langs_subdir');
-			$('#nav').load('../langs_nav.html #nav_es');
+			$('#nav').load('../langs_nav.html #nav_de');
 		});
 		$(window).bind("load", function() {
-		   $('a[href="../es"]').removeAttr('href');
+		   $('a[href="../de"]').removeAttr('href');
 		});
 		</script>
 		<!-- /js -->
@@ -42,7 +42,7 @@
 
 	<body>
 	
-	<!--<div class="alert"><p><span class="info-icon"></span><small>alert message <a href="#" target="_blank"><em>leer más</em></a></small></p></div>-->
+	<!--<div class="alert"><p><span class="info-icon"></span><small>alert message <a href="#" target="_blank"><em>read more</em></a></small></p></div>-->
 	
 	<header>
 	    <div class="container">
@@ -74,31 +74,31 @@
 			
 			<br />
 			
-			<p style="margin:0 auto; padding:0 100px; text-align:center;">Electrum es un cliente Bitcoin fácil de usar. Te protege de perder tus bitcoins si cometes un error al crear copias de seguridad o tu ordenador falla, porque tu cartera puede ser recuperada desde una frase secreta que puedes escribir en un papel o aprender de memoria. No hay esperas cuando inicias el cliente, porque no se descarga la cadena de bloques de Bitcoin.</p>
+			<p style="margin:0 auto; padding:0 100px; text-align:center;">Electrum ist ein einfach zu bedienender Bitcoin-Client. Er schützt Ihre Bitcoins vor Datenverlust, da Ihre Geldbörse aus einer geheimen Wortfolge wiederhergestellt werden kann, die Sie aufschreiben oder auswendig lernen können. Electrum startet sofort, da keine Kopie der Blockchain heruntergeladen wird.</p>
 			
 			<br />
 			
-			<p style="text-align:center;"><a href="#features" class="button">¿Por qué Electrum?</a></p>
-						
+			<p style="text-align:center;"><a href="#features" class="button">Warum Electrum?</a></p>
+			
 			<br /><br />
 			
-			<h3 id="features">Características:</h3>
+			<h3 id="features">Features:</h3>
 			
 			<ul>
-				<li>Instantáneo: Tu cliente no tiene que descargar la cadena de bloques, usa un servidor remoto.</li>
-				<li>Despreocúpate: Tu cartera puede ser recuperada desde una <a href="seed.html">semilla</a> secreta.</li>
-				<li>Segura: Las llaves privadas no son enviadas nunca al servidor. La información enviada por el servidor es verificada usando <a href="https://en.bitcoin.it/wiki/Thin_Client_Security#Header-Only_Clients" target="_blank">SPV</a>.</li>
-				<li>Sin caídas: Muchos servidores públicos están disponibles, puedes cambiar instantáneamente.</li>
-				<li>Omnipresente: Puedes usar la misma cartera en diferentes ordenadores, se auto-sincronizará.</li>
-				<li>Abierto: Puedes exportar tus llaves privadas a otros clientes Bitcoin.</li>
-				<li>Probado y auditado: Electrum es de código abierto y fue presentado por primera vez en Noviembre de 2011.</li>
+				<li>Sofort Einsatzbereit: Electrum benötigt keine lokale Kopie der Blockchain, diese liegt auf externen Servern.</li>
+				<li>Fehlertolerant: Ihre Geldbörse kann aus Ihren geheimen Startwerten (<a href="seed.html">Seed</a>) wiederhergestellt werden.</li>
+				<li>Sicher: Ihr Seed und private Schlüssel werden nie zum Server geschickt. Vom Server empfangene Daten werden mittels <a href="https://en.bitcoin.it/wiki/Thin_Client_Security#Header-Only_Clients" target="_blank">SPV</a> verifiziert. </li>
+				<li>Keine Ausfälle: Mehrere öffentliche Server stellen sicher, dass Electrum durchgängig funktioniert.</li>
+				<li>Universell: Sie können die selbe Geldbörse auf mehreren Geräten verwenden,  sie wird automatisch synchronisiert.</li>
+				<li>Offen: Private Schlüssel können in andere Clients importiert werden.</li>
+				<li>Geprüft und getestet: Electrum ist Open Source und existiert seit November 2011.</li>
 			</ul>
 			
 			<br />
 			
-			<h3>Interfaces de usuarios</h3>
+			<h3>Benutzeroberflächen</h3>
 			
-			<p>Electrum tiene muchas interfaces gráficas, que comparten la misma cartera: Clásico (Qt), Lite, Gtk, Android, Texto (usando Curses). Ve a <a href="screenshots.html">capturas de pantalla</a> para ver algunos ejemplos.</p>
+			<p>Electrum hat mehrere Oberflächen, die auf dem selben zugrundeliegenden Code basieren: Classic (Qt), Lite, Gtk, Android, Text (mittels curses). Beispiele finden Sie unter <a href="screenshots.html">Screenshots</a>.</p>
 
 		</section><!-- /container -->
 	</body>
