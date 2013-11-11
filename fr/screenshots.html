@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang=fr>
+	<head>
+		<title>Electrum Bitcoin Client</title>
+		
+		<meta charset=utf-8 />
+		<meta name=description content="Lightweight Bitcoin Client" />
+		<meta name=keywords content="electrum,bitcoin,blockchain,lightweight,instant" />
+		<!--<meta name=viewport content="width=device-width, initial-scale=1.0" />-->
+		
+		<!--[if lt IE 9]>
+		<script type="text/javascript" src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+		
+		<!-- Styles -->
+		<link rel="stylesheet" type="text/css" href="../css/screen.css" />
+		<!-- /Styles -->
+
+		<!-- Links -->
+		<link rel="shortcut icon" href="favicon.ico" />
+		<link rel=apple-touch-icon-precomposed href=.png />
+		<link rel=author type=text/plain href=../humans.txt>
+		<!-- /Links -->
+		
+		<!-- Analytics -->
+		
+		<!-- /Analytics -->
+			
+		<!-- js -->
+		<script src=https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js></script>
+		<script>
+		$(document).ready(function(){
+			$('#translations').load('../langs_nav.html #langs_subdir');
+			$('#nav').load('../langs_nav.html #nav_fr');
+		});
+		$(window).bind("load", function() {
+		   $('a[href="../fr"]').removeAttr('href');
+		});
+		</script>
+		<!-- /js -->
+	</head>
+
+	<body>
+
+		<header>
+		    <div class="container">
+		    	<nav id=translations>
+			    	<!-- langs -->
+			    </nav>
+				<nav id=nav>
+					<!-- nav -->
+				</nav>
+				<div class=header>
+					<i id=electrum_logo><img src="../media/electrum_logo.png" alt="Electrum" border="none" width="70" align="top" /></i>
+					<div id=logo><span><h1>Electrum</h1></span></div>
+					<h2>Lightweight Bitcoin Client</h2>
+				</div>
+		    </div>
+		</header>
+
+		<section class="container">
+			
+			<p>
+			<h3>Classic</h3>
+			<img src="../media/pro-mode.png" alt="electrum's Classic gui advanced-mode" />
+			</p>
+			
+			<p>
+			<h3>Lite</h3>
+			<img src="../media/litegui2.png" alt="electrum's Lite gui" />
+			</p>
+			
+			<p>
+			<h3>Gtk</h3>
+			
+			</p>
+			
+			<p>
+			<h3>Android</h3>
+			
+			</p>
+			
+			<p>
+			<h3>Text</h3>
+			<!--<img src="../media/textgui.png" alt="electrum's Text gui" />-->
+			</p>
+
+		</section><!-- /container -->
+	</body>
+</html>

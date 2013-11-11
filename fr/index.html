@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang=fr>
+	<head>
+		<title>Electrum Bitcoin Client</title>
+		
+		<meta charset=utf-8 />
+		<meta name=description content="Lightweight Bitcoin Client" />
+		<meta name=keywords content="electrum,bitcoin,blockchain,lightweight,instant" />
+		<!--<meta name=viewport content="width=device-width, initial-scale=1.0" />-->
+		
+		<!--[if lt IE 9]>
+		<script type="text/javascript" src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+		
+		<!-- Styles -->
+		<link rel="stylesheet" type="text/css" href="../css/screen.css" />
+		<!-- /Styles -->
+
+		<!-- Links -->
+		<link rel="shortcut icon" href="favicon.ico" />
+		<link rel=apple-touch-icon-precomposed href=.png />
+		<link rel=author type=text/plain href=../humans.txt>
+		<!-- /Links -->
+		
+		<!-- Analytics -->
+		
+		<!-- /Analytics -->
+			
+		<!-- js -->
+		<script src=https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js></script>
+		<script>
+		$(document).ready(function(){
+			$('#translations').load('../langs_nav.html #langs_subdir');
+			$('#nav').load('../langs_nav.html #nav_fr');
+		});
+		$(window).bind("load", function() {
+		   $('a[href="../fr"]').removeAttr('href');
+		});
+		</script>
+		<!-- /js -->
+	</head>
+
+	<body>
+	
+	<!--<div class="alert"><p><span class="info-icon"></span><small>alert message <a href="#" target="_blank"><em>read more</em></a></small></p></div>-->
+	
+	<header>
+	    <div class="container">
+	    	<nav id=translations>
+		    	<!-- langs -->
+		    </nav>
+			<nav id=nav>
+				<!-- nav -->
+				<!-- DON'T MODIFY for translations, use 'langs_nav.html' as explained in the README file -->
+				<ul id=nav_en class=nav>
+					<li><a href="index.html">Home</a></li>
+					<li><a href="../download.html">Download</a></li>
+					<li><a href="documentation.html">Documentation</a></li>
+					<li><a href="community.html">Community</a></li>
+				</ul>
+				<!-- /DON'T MODIFY end -->
+			</nav>
+			<div class=header>
+				<i id=electrum_logo><img src="../media/electrum_logo.png" alt="Electrum" border="none" width="70" align="top" /></i>
+				<div id=logo><span><h1>Electrum</h1></span></div>
+				<h2>Lightweight Bitcoin Client</h2>
+			</div>
+	    </div>
+	</header>
+
+		<section class="container">
+			
+			<figure style="text-align:center;"><img src="../media/splash_electrum_gui.png" alt="Electrum" border="none"/></figure>
+			
+			<br />
+			
+			<p style="margin:0 auto; padding:0 100px; text-align:center;">Electrum est un client Bitcoin facile à utiliser. Il vous protège contre la perte de coins en cas d'erreur de sauvegarde ou d'une défaillance de votre ordinateur, parce que votre portefeuille peut être récupéré à partir d'une phrase secrète que vous pouvez noter sur une feuille ou apprendre par cœur. Il n'y a pas de temps d'attente quand vous lancez le client, car il ne télécharge par la chaîne de blocs Bitcoin.</p>
+			
+			<br />
+			
+			<p style="text-align:center;"><a href="#features" class="button">Pourquoi Electrum ?</a></p>
+			
+			<br /><br />
+			
+			<h3 id="features">Fonctionnalités :</h3>
+			
+			<ul>
+				<li>Immédiatement connecté : Votre client ne télécharge pas la chaîne de blocs, il utilise un serveur distant.</li>
+				<li>Indulgent : Votre portefeuille peut être récupéré à partir d'une <a href="seed.html">graine</a> secrète.</li>
+				<li>Sûr : Votre graine et vos clés privés ne sont pas envoyées au serveur. Les informations reçues du serveur sont vérifiées grâce à <a href="https://en.bitcoin.it/wiki/Thin_Client_Security#Header-Only_Clients" target="_blank">SPV</a> </li>
+				<li>Aucun temps mort : Plusieurs serveurs publics sont disponibles, vous pouvez changer instantanément.</li>
+				<li>Omniprésent : Vous pouvez utiliser le même portefeuille sur différents ordinateurs, il se synchronisera automatiquement.</li>
+				<li>Ouvert : Vous pouvez exporter vos clés privées vers d'autre clients Bitcoin.</li>
+				<li>Testé et audité : Electrum est open source et a été lancé en Novembre 2011.</li>
+			</ul>
+			
+			<br />
+			
+			<h3>Interfaces d'utilisateurs</h3>
+			
+			<p>Electrum a plusieurs interfaces d'utilisateurs, qui partagent le même code de portefeuille : Classique (Qt), Lite, Gtk, Android, Texte (utilise curses). Allez sur <a href="screenshots.html">captures d'écrans</a> pour voir quelques examples</p>
+
+		</section><!-- /container -->
+	</body>
+</html>

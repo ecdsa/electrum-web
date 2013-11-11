@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang=fr>
+	<head>
+		<title>Electrum Bitcoin Client</title>
+		
+		<meta charset=utf-8 />
+		<meta name=description content="Lightweight Bitcoin Client" />
+		<meta name=keywords content="electrum,bitcoin,blockchain,lightweight,instant" />
+		<!--<meta name=viewport content="width=device-width, initial-scale=1.0" />-->
+		
+		<!--[if lt IE 9]>
+		<script type="text/javascript" src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+		
+		<!-- Styles -->
+		<link rel="stylesheet" type="text/css" href="../css/screen.css" />
+		<!-- /Styles -->
+
+		<!-- Links -->
+		<link rel="shortcut icon" href="favicon.ico" />
+		<link rel=apple-touch-icon-precomposed href=.png />
+		<link rel=author type=text/plain href=../humans.txt>
+		<!-- /Links -->
+		
+		<!-- Analytics -->
+		
+		<!-- /Analytics -->
+			
+		<!-- js -->
+		<script src=https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js></script>
+		<script>
+		$(document).ready(function(){
+			$('#translations').load('../langs_nav.html #langs_subdir');
+			$('#nav').load('../langs_nav.html #nav_fr');
+		});
+		$(window).bind("load", function() {
+		   $('a[href="../fr"]').removeAttr('href');
+		});
+		</script>
+		<!-- /js -->
+	</head>
+
+	<body>
+
+		<header>
+		    <div class="container">
+		    	<nav id=translations>
+			    	<!-- langs -->
+			    </nav>
+				<nav id=nav>
+					<!-- nav -->
+					<!-- DON'T MODIFY for translations, use 'langs_nav.html' as explained in the README file -->
+					<ul id=nav_en class=nav>
+						<li><a href="index.html">Home</a></li>
+						<li><a href="../download.html">Download</a></li>
+						<li><a href="documentation.html">Documentation</a></li>
+						<li><a href="community.html">Community</a></li>
+					</ul>
+					<!-- /DON'T MODIFY end -->
+				</nav>
+				<div class=header>
+					<i id=electrum_logo><img src="../media/electrum_logo.png" alt="Electrum" border="none" width="70" align="top" /></i>
+					<div id=logo><span><h1>Electrum</h1></span></div>
+					<h2>Lightweight Bitcoin Client</h2>
+				</div>
+		    </div>
+		</header>
+
+		<section class="container">
+
+			<h3>Guides étape-par-étape</h3>
+
+			<ul>
+				<li><a href="#why-electrum">Pourquoi Electrum ?</a></li>
+				<li><a href="#starting-up">Démarrer</a></li>
+				<li><a href="#restoring-seed">Récupérer un portefeuille à partir de votre graine. Créer un portefeuille sans graine</a></li>
+				<li><a href="#offline-mpk">Comment créer des transactions hors-ligne en utilisant votre clé publique maîtresse</a></li>
+				<li><a href="#switching-to-electrum">Que faire de mes anciennes adresses et portefeuilles quand je migre vers Electrum ?</a></li>
+                <li><a href="#switching-wallets">Migrer, créer ou restaurer de multiples fichiers de portefeuille</a></li>
+			</ul>
+
+			<hr>
+
+			<h4 id="why-electrum">Pourquoi Electrum ?</h4>
+			<ul>
+				<li>Immédiatement connecté : Votre client ne télécharge pas la chaîne de blocs, il utilise un serveur distant.</li>
+				<li>Indulgent : Votre portefeuille peut être récupéré à partir d'une <a href="seed.html">graine</a> secrète.</li>
+				<li>Sur : Vos clés privées ne sont jamais envoyés au serveur. Les informations envoyées par le serveur sont vérifiées grâce à <a href="https://en.bitcoin.it/wiki/Thin_Client_Security#Header-Only_Clients">SPV</a> </li>
+				<li>Aucun temps mort : Plusieurs serveurs publics sont disponibles, vous pouvez changer instantanément.</li>
+				<li>Omniprésent : Vous pouvez utiliser le même portefeuille sur différents ordinateurs, il se synchronisera automatiquement.</li>
+				<li>Ouvert : Vous pouvez exporter vos clés privées vers d'autre clients Bitcoin.</li>
+				<li>Testé et audité : Electrum est open source et a été lancé en Novembre 2011.</li>
+			</ul>
+
+			<hr>
+
+			<h4 id="starting-up">Démarrer</h4>
+			<ul>
+				<li>Une fois que vous avez téléchargé et lancé Electrum pour la première fois, il vous sera demandé de créer un portefeuille.</li>
+				<li>Sélectionnez un des serveurs dans la liste et cliquez sur OK.</li>
+				<li>Une graine va être générée pour vous. Vous devez garder cette graine en lieu sûr, elle vous permettra de restaurer votre portefeuille à l'avenir.</li>
+				<li>Il est recommandé de choisir un mot de passe difficile pour encrypter votre portefeuille.</li>
+				<li>Vous pouvez maintenant commencer à utiliser Electrum pour envoyer et recevoir des Bitcoins.</li>
+				<li>De nouvelles adresses sont automatiquement générées quand vos adresses de réception sont utilisées.</li>
+			</ul>
+
+			<hr>
+
+			<h4 id="restoring-seed">Récupérer un portefeuille à partir de votre graine. Créer un portefeuille sans graine</h4>
+			<ul>
+				<li>Si vous avez perdu votre portefeuille Electrum, vous pouvez le restaurer à partir de votre graine.</li>
+				<li>Lancez Electrum et sélectionnez l'option 'Restore', insérez votre graine et laissez la 'gap limit' par défaut si vous ne l'aviez pas changée dans votre ancienne instance Electrum.</li>
+				<li>Suivez les étapes comme si vous étiez en train de créer un portefeuille pour la première fois.</li>
+				<li>Consultez l'autre guide "Créer des sauvegardes" pour éviter de perdre les étiquettes que vous aviez choisies pour vos adresses, si vous aurez encore besoin de restaurer votre portefeuille par la suite.</li>
+				<br />
+				<li>Les portefeuilles sans graine peuvent générer des adresses pour recevoir des Bitcoins, mais ne peuvent pas en envoyer.</li>
+				<li>Pour créer un portefeuille sans graine, lancez Electrum, choisissez l'option 'Restore' et entrez votre clé publique maîtresse au lieu de votre graine.</li>
+				<li>Vous pouvez utiliser votre portefeuille sans graine dans les systèmes de point de vente.</li>
+			</ul>
+
+			<hr>
+
+			<h4 id="offline-mpk">Comment créer des transactions hors-ligne en utilisant votre clé publique maîtresse</h4>
+			<p>Récupérez un ordinateur hors-ligne. Cela peut être un appareil distinct ou une installation séparée sur votre ordinateur actuel. Je recommanderai une installation Debian avec un dossier home encrypté pour plus de sécurité.</p>
+			<ul>
+				<li><em>[PC hors-ligne]</em> Installez Electrum via une clé USB.</li>
+				<li><em>[PC hors-ligne]</em> Créez un nouveau portefeuille. Notez la graine sur un papier et mémoriser la, après quoi vous devriez probablement la détruire ou la mettre dans un coffre-fort.</li>
+				<li><em>[PC hors-ligne]</em> Allez dans Paramètres (Settings) -> Importation/Exportation (Import/Export), puis copiez votre clé publique maîtresse (Master Public Key) et gardez-la dans un fichier texte sur votre clé USB.</li>
+				<li><em>[PC connecté]</em> Installez Electrum et sélectionnez <i>Restore</i> dans la boîte de dialogue affichée au premier lancement, et utilisez la clé publique maîtresse.</li>
+				<li><em>[PC connecté, sur l'installation Electrum existante] Consultez ci-dessous pour ouvrir ou restaurer un portefeuille alternatif différent avec Electrum.</em>
+			</ul>
+
+			<p>Vous avez maintenant un portefeuille connecté où vous pouvez consulter vos comptes et générer de nouvelles adresses, mais sans pouvoir dépenser de Bitcoins. Ainsi, si un attaquant venait à prendre le contrôle de votre ordinateur connecté, vos Bitcoins ne pourraient être perdus.</p>
+
+			<p>Pour effectuer une transaction, suivez ces étapes :</p>
+
+			<ul>
+				<li><em>[PC connecté]</em> Allez sur l'onglet Envoyer (Send) et créez une transaction. Au lieu de l'envoyer, Electrum va détecter un portefeuille sans graine et demander une location pour sauvegarder la transaction. Sélectionnez votre clé USB.</li>
+				<li><em>[PC hors-ligne]</em> Allez sur Paramètres (Settings) -> Importation/Exportation (Import/Export) -> "Charger une transaction brute" (Load raw transaction). Sélectionnez la transaction sur votre clé USB. Elle va être détectée comme non-signée et Electrum vous demandera de la signer. Rentrez votre mot de passe et signez la transaction. Sauvegarder la nouvelle transaction signée sur votre clé USB.</li>
+				<li><em>[PC connecté]</em> Allez sur Paramètres (Settings) -> Importation/Exportation (Import/Export) -> "Charger une transaction brute" (Load raw transaction). Sélectionnez la transaction signée et Electrum vous demandra si vous voulez la diffuser.</li>
+			</ul>
+
+			<hr>
+
+			<h4 id="switching-to-electrum">Que faire de mes anciennes adresses et portefeuilles quand je migre vers Electrum ?</h4>
+			<p>La meilleure façon de migrer vers Electrum est d'envoyer tous les Bitcoins dans votre ancien portefeuille vers une des adresses de votre portefeuille Electrum. De cette manière, vous aurez tous vos Bitcoins sécurisés avec votre graine.</p>
+
+			<p>Vous pourriez importer les clés privées de votre ancien client, mais vous aurez à garder une copie de ces clés séparément car elle ne seront pas intégrées dans votre graine Electrum.</p>
+
+            <hr>
+
+            <h4 id="switching-wallets">Migrer, créer ou restaurer de multiples fichiers de portefeuille</h4>
+
+            <p>Il se peut que vous vouliez ouvrir un portefeuille alternatif ou restaurer un autre portefeuille. Vous pouvez le faire en lançant Electrum à partir de la ligne de commande et en pointant vers le fichier du portefeuille. Si le portefeuille n'existe pas, il est créé ou restauré.</p>
+
+            <p>Exemple (exécutable pour OSX) :</p>
+
+<pre>cd /Applications/Electrum.app/Contents/MacOS
+./Electrum -w ~/path/to/your-new-wallet-file</pre>
+
+            <p>Pour revenir à votre portefeuille par défaut, lancez Electrum sans le paramètre <code>-w</code> (ou lancez le simplement à partir de l'icône de l'application).</p>
+
+<pre>cd /Applications/Electrum.app/Contents/MacOS
+./Electrum</pre>
+
+			<p>Une fois que plusieurs fichiers de portefeuille existent, vous pouvez alterner entre ceux-ci en utilisant la fonctionnalité de portefeuille ouvert, en allant vers Fichier (File) > Ouvrir le portefeuille (Open wallet) </p>
+
+		</section><!-- /container -->
+	</body>
+</html>
