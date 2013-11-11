@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang=es>
+<html lang=de>
 	<head>
 		<title>Electrum Bitcoin Client</title>
 		
@@ -31,10 +31,10 @@
 		<script>
 		$(document).ready(function(){
 			$('#translations').load('../langs_nav.html #langs_subdir');
-			$('#nav').load('../langs_nav.html #nav_es');
+			$('#nav').load('../langs_nav.html #nav_de');
 		});
 		$(window).bind("load", function() {
-		   $('a[href="../es"]').removeAttr('href');
+		   $('a[href="../de"]').removeAttr('href');
 		});
 		</script>
 		<!-- /js -->
@@ -68,11 +68,13 @@
 
 		<section class="container">
 			
-			<p>La mayoría de los comandos de Electrum están también disponibles en la consola.
-			<br/>
-			Los resultados son objetos de Python, a pesar de que aveces son mostrados como un JSON por claridad.</p>
+			<p>Die meisten Befehlszeilen-Kommandos sind auch in der Konsole verfügbar.
+
+<br/>
+
+Die Ausgaben sind Python-Objekte, obwohl sie manchmal der Übersichtlichkeit halber als JSON dargestellt werden.</p>
 			
-			<p>Llamemos <tt>listunspent()</tt>, para ver la lista de los outputs sin gastar en la cartera:</p>
+			<p>Wir rufen <tt>listunspent()</tt> auf, um eine Liste der unbenutzten Ausgänge der Geldbörse zu sehen:</p>
 			
 			<pre>
 >> listunspent()
@@ -92,17 +94,19 @@
         "value": 9.04735316
     }
 ]</pre>
-			<p>Nótese que el resultado es mostrado como un JSON. <br/>
-			Pero, si lo guardamos como una variable de Python, resulta en un objeto de Python:</p>
+			<p>Beachten Sie, dass die Ausgabe als JSON dargestellt wird. <br/>
+Speichern wir es jedoch als Python-Variable, wird es als Python-Objekt dargestellt:</p>
 			
 			<pre>
 >> u = listunspent()
 >> u
 [{'tx_hash': u'e7029df9ac8735b04e8e957d0ce73987b5c9c5e920ec4a445130cdeca654f096', 'index': 0, 'raw_output_script': '76a91411bbdc6e3a27c44644d83f783ca7df3bdc2778e688ac', 'value': 0.01, 'address': '12cmY5RHRgx8KkUKASDcDYRotget9FNso3'}, {'tx_hash': u'b30edf57ca2a31560b5b6e8dfe567734eb9f7d3259bb334653276efe520735df', 'index': 0, 'raw_output_script': '76a914aaf437e25805f288141bfcdc27887ee5492bd13188ac', 'value': 9.04735316, 'address': '1GavSCND6TB7HuCnJSTEbHEmCctNGeJwXF'}]
 </pre>
-			<p><br/>
-			Esto permite combinar comandos de Electrum con Python.<br/>
-			Por ejemplo, tomemos solo las direcciones en el resultado anterior:</p>
+		
+		<p><br/>
+		Dies macht es möglich, Electrum-Befehle mit Python zu kombinieren.<br/>
+Wählen wir zum Beispiel nur die Adressen des vorherigen Resultats aus:</p>
+		
 <pre>
 >> map(lambda x:x.get('address'), listunspent())
 [
@@ -110,7 +114,7 @@
     "1GavSCND6TB7HuCnJSTEbHEmCctNGeJwXF"
 ]</pre>
 			
-			<p>Aquí combinamos dos comandos, <tt>listunspent</tt> and <tt>dumpprivkeys</tt>, para sacar las llaves privadas de todas las direcciones en las que tenemos outputs sin gastas:</p>
+			<p>Hier kombinieren wir zwei Befehle, <tt>listunspent</tt> und <tt>dumpprivkeys</tt>, um eine Liste aller privaten Schlüssel aller Adressen mit unbenutzten Ausgängen auszugeben:</p>
 			
 			<pre>
 >> dumpprivkeys( map(lambda x:x.get('address'), listunspent()) )
@@ -119,11 +123,13 @@
     "1GavSCND6TB7HuCnJSTEbHEmCctNGeJwXF": "***************************************************"
 }</pre>
 			
-			<p>Nótese que <tt>dumpprivkey</tt> pedirá tu contraseña si tu cartera está encriptada.</p>
+			<p>Beachten Sie dass <tt>dumpprivkey</tt>  nach Ihrem Passwort fragt, wenn die Geldbörse verschlüsselt ist.</p>
 			
-			<p>Los métodos de la interfaz de usuario pueden accederse a través de la variable <tt>gui</tt>. Por ejemplo, puedes mostrar un código QR de una serie de carácteres usando <tt>gui.show_qrcode</tt>.
-			<br/><br/>
-			Example:</p>
+			<p>The GUI-Aktionen können mittels der <tt>gui</tt>-Variable aufgerufen werden.
+Beispielsweise lässt sich ein QR-Code aus einem String mittels
+<tt>gui.show_qrcode</tt> anzeigen.
+<br/><br/>
+Beispiel:</p>
 			
 			<pre>
 gui.show_qrcode(dumpprivkey(listunspent()[0]['address']))</pre>

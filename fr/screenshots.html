@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang=es>
+<html lang=fr>
 	<head>
 		<title>Electrum Bitcoin Client</title>
 		
@@ -31,10 +31,10 @@
 		<script>
 		$(document).ready(function(){
 			$('#translations').load('../langs_nav.html #langs_subdir');
-			$('#nav').load('../langs_nav.html #nav_es');
+			$('#nav').load('../langs_nav.html #nav_fr');
 		});
 		$(window).bind("load", function() {
-		   $('a[href="../es"]').removeAttr('href');
+		   $('a[href="../fr"]').removeAttr('href');
 		});
 		</script>
 		<!-- /js -->
@@ -42,21 +42,13 @@
 
 	<body>
 
-	<header>
+		<header>
 		    <div class="container">
 		    	<nav id=translations>
 			    	<!-- langs -->
 			    </nav>
 				<nav id=nav>
 					<!-- nav -->
-					<!-- DON'T MODIFY for translations, use 'langs_nav.html' as explained in the README file -->
-					<ul id=nav_en class=nav>
-						<li><a href="index.html">Home</a></li>
-						<li><a href="../download.html">Download</a></li>
-						<li><a href="documentation.html">Documentation</a></li>
-						<li><a href="community.html">Community</a></li>
-					</ul>
-					<!-- /DON'T MODIFY end -->
 				</nav>
 				<div class=header>
 					<i id=electrum_logo><img src="../media/electrum_logo.png" alt="Electrum" border="none" width="70" align="top" /></i>
@@ -68,14 +60,30 @@
 
 		<section class="container">
 			
-			<h3>Documentacón</h3>
-
-			<ul>
-				<li><a href="tutorials.html">Tutoriales paso a paso</a></li>
-				<li><a href="offline_wallets.html">Como firmar una transacción con una cartera sin conexión de Electrum</a></li>
-				<li><a href="console.html">Consola</a></li>
-				<li><a href="android.html">Android</a></li>
-			</ul>
+			<p>
+			<h3>Classic</h3>
+			<img src="../media/pro-mode.png" alt="electrum's Classic gui advanced-mode" />
+			</p>
+			
+			<p>
+			<h3>Lite</h3>
+			<img src="../media/litegui2.png" alt="electrum's Lite gui" />
+			</p>
+			
+			<p>
+			<h3>Gtk</h3>
+			
+			</p>
+			
+			<p>
+			<h3>Android</h3>
+			
+			</p>
+			
+			<p>
+			<h3>Text</h3>
+			<!--<img src="../media/textgui.png" alt="electrum's Text gui" />-->
+			</p>
 
 		</section><!-- /container -->
 	</body>

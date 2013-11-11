@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang=es>
+<html lang=de>
 	<head>
 		<title>Electrum Bitcoin Client</title>
 		
@@ -31,18 +31,17 @@
 		<script>
 		$(document).ready(function(){
 			$('#translations').load('../langs_nav.html #langs_subdir');
-			$('#nav').load('../langs_nav.html #nav_es');
+			$('#nav').load('../langs_nav.html #nav_de');
 		});
 		$(window).bind("load", function() {
-		   $('a[href="../es"]').removeAttr('href');
+		   $('a[href="../de"]').removeAttr('href');
 		});
 		</script>
 		<!-- /js -->
 	</head>
 
 	<body>
-
-	<header>
+		<header>
 		    <div class="container">
 		    	<nav id=translations>
 			    	<!-- langs -->
@@ -67,15 +66,18 @@
 		</header>
 
 		<section class="container">
+			<p>Electrum verwendet einen 128-Bit Zufallsstartwert (Seed) zum erstellen der privaten Schlüssel.<p/>
 			
-			<h3>Documentacón</h3>
-
-			<ul>
-				<li><a href="tutorials.html">Tutoriales paso a paso</a></li>
-				<li><a href="offline_wallets.html">Como firmar una transacción con una cartera sin conexión de Electrum</a></li>
-				<li><a href="console.html">Consola</a></li>
-				<li><a href="android.html">Android</a></li>
-			</ul>
+			<p>Der Seed kann mnemonisch als Code aus 12 Wörtern dargestellt werden:<br/><br/>
+			<img src="http://s3.ecdsa.org/seed.png" />
+			<br/>
+			<p/>
+			
+			<p>Sollte Ihre Geldbörse verloren gehen, kann sie jederzeit aus dem Seed wiederhergestellt werden:<br/><br/>
+			<img src="http://s3.ecdsa.org/recover.png" /><br/>
+			<p/>
+			
+			<p>Das ist alles! Keine Sorgen mehr über Backups, Sie müssen sich lediglich 12 Wörter merken.</p>
 
 		</section><!-- /container -->
 	</body>

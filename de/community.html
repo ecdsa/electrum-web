@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang=es>
+<html lang=de>
 	<head>
 		<title>Electrum Bitcoin Client</title>
 		
@@ -31,10 +31,10 @@
 		<script>
 		$(document).ready(function(){
 			$('#translations').load('../langs_nav.html #langs_subdir');
-			$('#nav').load('../langs_nav.html #nav_es');
+			$('#nav').load('../langs_nav.html #nav_de');
 		});
 		$(window).bind("load", function() {
-		   $('a[href="../es"]').removeAttr('href');
+		   $('a[href="../de"]').removeAttr('href');
 		});
 		</script>
 		<!-- /js -->
@@ -42,7 +42,7 @@
 
 	<body>
 
-	<header>
+		<header>
 		    <div class="container">
 		    	<nav id=translations>
 			    	<!-- langs -->
@@ -65,18 +65,37 @@
 				</div>
 		    </div>
 		</header>
-
+		
 		<section class="container">
-			
-			<h3>Documentacón</h3>
 
+			<h3>Community</h3>
 			<ul>
-				<li><a href="tutorials.html">Tutoriales paso a paso</a></li>
-				<li><a href="offline_wallets.html">Como firmar una transacción con una cartera sin conexión de Electrum</a></li>
-				<li><a href="console.html">Consola</a></li>
-				<li><a href="android.html">Android</a></li>
+				<li><a href="https://github.com/spesmilo/electrum">Projektseite auf GitHub</a></li>
+				<li>Diskussion, Fehlerberichte und Unterstützung: <a href="https://bitcointalk.org/index.php?board=98.0">Electrum Forum auf bitcointalk.org</a></li>
+				<li>IRC Channel: treten Sie <a href="irc://irc.freenode.net/electrum">#electrum</a> auf Freenode bei</li>
+				<li>Dokumentation: <a href="https://en.bitcoin.it/wiki/Electrum">https://en.bitcoin.it/wiki/Electrum</a></li>
+				<li>Übersetzung: <a href="http://bitcoin.wikia.com/wiki/Electrum">http://bitcoin.wikia.com/wiki/Electrum</a></li>
+				<li>Serverliste und Status: <a href="http://electrum.be">http://electrum.be</a> oder <a href="http://arche.jooz.net/">http://arche.jooz.net/</a></li>
+				<li>Eigenen Server betreiben: Siehe <a href="https://github.com/spesmilo/electrum-server/blob/master/HOWTO.md">HOWTO</a> und <a href="http://foundry.electrum.org/">database download foundry</a></li>
+			</ul>
+
+
+			<h3>Entwickler</h3>
+			<ul>
+			    <li>ThomasV - Urheber und Entwickler.</li>
+			    <li>Animazing - Hat die neue GUI entworfen.</li>
+			    <li>Azelphur - GUI.</li>
+			    <li>Coblee - Alternativ-coin Unterstützung und py2app Unterstützung.</li>
+			    <li>Deafboy - Ubuntu Pakete.</li>
+			    <li>EagleTM - Bugfixes.</li>
+			    <li>ErebusBat - Mac Unterstützung.</li>
+			    <li>Genjix - Portierung der pro-mode Funktionalität zur lite-gui.</li>
+			    <li>Slush - Arbeit am Server. Entwurf der originalen Stratum-Spezifikationen.</li>
+			    <li>Tuxavant - Diverse Fixes am Client.</li>
+			    <li>rdymac - Webseite und Übersetzungen.</li>
 			</ul>
 
 		</section><!-- /container -->
 	</body>
 </html>
+

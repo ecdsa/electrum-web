@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang=de>
+	<head>
+		<title>Electrum Bitcoin Client</title>
+		
+		<meta charset=utf-8 />
+		<meta name=description content="Lightweight Bitcoin Client" />
+		<meta name=keywords content="electrum,bitcoin,blockchain,lightweight,instant" />
+		<!--<meta name=viewport content="width=device-width, initial-scale=1.0" />-->
+		
+		<!--[if lt IE 9]>
+		<script type="text/javascript" src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+		
+		<!-- Styles -->
+		<link rel="stylesheet" type="text/css" href="../css/screen.css" />
+		<!-- /Styles -->
+
+		<!-- Links -->
+		<link rel="shortcut icon" href="favicon.ico" />
+		<link rel=apple-touch-icon-precomposed href=.png />
+		<link rel=author type=text/plain href=../humans.txt>
+		<!-- /Links -->
+		
+		<!-- Analytics -->
+		
+		<!-- /Analytics -->
+			
+		<!-- js -->
+		<script src=https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js></script>
+		<script>
+		$(document).ready(function(){
+			$('#translations').load('../langs_nav.html #langs_subdir');
+			$('#nav').load('../langs_nav.html #nav_de');
+		});
+		$(window).bind("load", function() {
+		   $('a[href="../de"]').removeAttr('href');
+		});
+		</script>
+		<!-- /js -->
+	</head>
+
+	<body>
+
+		<header>
+		    <div class="container">
+		    	<nav id=translations>
+			    	<!-- langs -->
+			    </nav>
+				<nav id=nav>
+					<!-- nav -->
+					<!-- DON'T MODIFY for translations, use 'langs_nav.html' as explained in the README file -->
+					<ul id=nav_en class=nav>
+						<li><a href="index.html">Home</a></li>
+						<li><a href="../download.html">Download</a></li>
+						<li><a href="documentation.html">Documentation</a></li>
+						<li><a href="community.html">Community</a></li>
+					</ul>
+					<!-- /DON'T MODIFY end -->
+				</nav>
+				<div class=header>
+					<i id=electrum_logo><img src="../media/electrum_logo.png" alt="Electrum" border="none" width="70" align="top" /></i>
+					<div id=logo><span><h1>Electrum</h1></span></div>
+					<h2>Lightweight Bitcoin Client</h2>
+				</div>
+		    </div>
+		</header>
+
+		<section class="container">
+
+			<h3>Schritt-für-Schritt Anleitungen</h3>
+
+			<ul>
+				<li><a href="#why-electrum">Warum Electrum?</a></li>
+				<li><a href="#starting-up">Erste Schritte</a></li>
+				<li><a href="#restoring-seed">Geldbörse aus Seed wiederherstellen / Geldbörse ohne Seed erstellen</a></li>
+				<li><a href="#offline-mpk">Offline-Transaktionen mittels des Öffentlichen Hauptschlüssels erstellen</a></li>
+				<li><a href="#switching-to-electrum">Was mache Ich mit meinen alten Adressen und Geldbörsen wenn ich zu Electrum wechsle?</a></li>
+                <li><a href="#switching-wallets">Wechseln, Erstellen oder Wiederherstellen mehrerer Geldbörsen</a></li>
+			</ul>
+
+			<hr>
+
+			<h4 id="why-electrum">Warum Electrum?</h4>
+			<ul>
+				<li>Sofort Einsatzbereit: Electrum benötigt keine lokale Kopie der Blockchain, diese liegt auf externen Servern.</li>
+				<li>Fehlertolerant: Ihre Geldbörse kann aus Ihren geheimen Startwerten (<a href="seed.html">Seed</a>) wiederhergestellt werden.</li>
+				<li>Sicher: Ihr Seed und private Schlüssel werden nie zum Server geschickt. Vom Server empfangene Daten werden mittels <a href="https://en.bitcoin.it/wiki/Thin_Client_Security#Header-Only_Clients">SPV</a> verifiziert. </li>
+				<li>Keine Ausfälle: Mehrere öffentliche Server stellen sicher, dass Electrum durchgängig funktioniert.</li>
+				<li>Universell: Sie können die selbe Geldbörse auf mehreren Geräten verwenden,  sie wird automatisch synchronisiert.</li>
+				<li>Offen: Private Schlüssel können in andere Clients importiert werden.</li>
+				<li>Geprüft und getestet: Electrum ist Open Source und existiert seit November 2011.</li>
+			</ul>
+
+			<hr>
+
+			<h4 id="starting-up">Erste Schritte</h4>
+			<ul>
+				<li>Sobald Electrum heruntergeladen und zum ersten Mal gestartet wurde, werden Sie aufgefordert, eine Geldbörse zu erstellen.</li>
+				<li>Wählen Sie einen beliebigen Server aus der Liste und klicken Sie "Ok".</li>
+				<li>Ein Zufallsstartwert (Seed) wird für Sie erstellt. Bewahren Sie diesen sicher auf, er ermöglicht die Wiederherstellung der Geldbörse bei Verlust.</li>
+				<li>Es wird empfohlen, ein sicheres Passwort zum Verschlüsseln Ihrer Geldbörse einzurichten.</li>
+				<li>Sie können nun Electrum zum Senden und Empfangen von Bitcoins verwenden.</li>
+				<li>Neue Adressen werden automatisch generiert, wenn Ihre Empfangsadressen aufgebraucht sind.</li>
+			</ul>
+
+			<hr>
+
+			<h4 id="restoring-seed">Geldbörse aus Seed wiederherstellen / Geldbörse ohne Seed erstellen</h4>
+			<ul>
+				<li>Falls Sie Ihre Geldbörse verloren haben, können Sie diese aus ihrem Seed wiederherstellen.</li>
+				<li>Starten Sie dazu Electrum und wählen Sie den Punkt "Wiederherstellen", geben Sie den Seed ein und lassen Sie "gap limit" auf der Standardeinstellung, wenn Sie es im vorherigen Electrum nicht geändert haben.</li>
+				<li>Folgen Sie den Schritten als ob Sie zum ersten Mal Ihre Geldbörse erstellen.</li>
+				<li>Sehen Sie sich das Tutorial "Backups erstellen" an, um zu lernen wie Sie auch Ihre Kontenbezeichnungen sichern können, für den Fall dass Sie jemals erneut Ihre Geldbörse wiederherstellen müssen.</li>
+				<br />
+				<li>Geldbörsen ohne Seed können Adressen zum Empfang von Bitcoins erzeugen, jedoch keine senden.</li>
+				<li>Um eine Geldbörse ohne Seed zu erstellen, starten Sie Electrum, wählen Sie "Wiederherstellen" und geben Sie anstelle des Seed Ihren öffentlichen Hauptschlüssel ein.</li>
+				<li>Ein Anwendungszweck für Geldbörsen ohne Seed sind Point Of Sale-Systeme.</li>
+			</ul>
+
+			<hr>
+
+			<h4 id="offline-mpk">Offline-Transaktionen mittels des Öffentlichen Hauptschlüssels erstellen</h4>
+			<p>Sie benötigen einen 2. PC der offline ist. Dies kann entweder ein physisches Gerät oder eine separate Installation auf Ihrem jetzigen Computer sein. Wir empfehlen für besondere Sicherheit eine Debian-Installation mit verschlüsseltem Home-Ordner.</p>
+			<ul>
+				<li><em>[Offline PC]</em> Electrum via USB-Stick installieren.</li>
+				<li><em>[Offline PC]</em> Neue Geldbörse erstellen. Seed aufschreiben und einprägen, anschliessend Seed vernichten oder in einem Schliessfach sicher verwahren.</li>
+				<li><em>[Offline PC]</em> Zu Einstellungen -> Import/Export gehen, "Öffentlichen Hauptschlüssel" kopieren und in Text-Datei auf USB-Stick sichern.</li>
+				<li><em>[Online PC]</em> Electrum installieren und beim ersten Start <i>Wiederherstellen</i> auswählen, "Öffentlichen Hauptschlüssel" eingeben.</li>
+				<li><em>[Online PC mit bestehender Electrum-Installation] Lesen Sie weiter unten wie Sie alternative oder non-standard Geldbörsen öffnen oder wiederherstellen können.</em>
+			</ul>
+
+			<p>Sie haben nun eine Geldbörse mit Internetverbindung die Ihnen erlaubt Adressen herauszugeben und Guthabenstände zu prüfen, jedoch ohne die Möglichkeit Coins auszugeben. Sollte es nun einem Angreifer gelingen Ihren am Internet angeschlossenen Rechner zu übernehmen, können Ihre Coins nicht verloren gehen.</p>
+
+			<p>Um eine Transaktion auszulösen:</p>
+
+			<ul>
+				<li><em>[Online PC]</em> Gehen Sie zum "Senden"-Tab und erstellen Sie eine Transaktion. Statt diese zu senden, wird Electrum eine Geldbörse ohne Seed erkennen und nach einem Speicherort für die Transaktion fragen. Wählen Sie Ihren USB-Stick.</li>
+				<li><em>[Offline PC]</em> Einstellungen -> Import/Export -> "Roh-Transaktion laden". Transaktion vom USB-Stick auswählen. Es wird erkennen daß diese nicht signiert ist, und Sie auffordern dies zu tun. Geben Sie Ihr Passwort ein und signieren Sie die Transaktion. Speichern Sie die neue, signierte, Transaktion auf dem USB-Stick.</li>
+				<li><em>[Online PC]</em> Einstellungen -> Import/Export -> "Roh-Transaktion Laden". Signierte Transaktion auswählen, und Sie werden gefragt ob Sie diese senden möchten.</li>
+			</ul>
+
+			<hr>
+
+			<h4 id="switching-to-electrum">Was mache Ich mit meinen alten Adressen und Geldbörsen wenn ich zu Electrum wechsle?</h4>
+			<p>Der beste Weg zu Electrum zu wechseln ist, alle Bitcoins in Ihrer alten Geldbörse an eine neue Adresse in Ihrer Electrum-Geldbörse zu senden. Dadurch sind all Ihre Bitcoins durch Ihren Seed gesichert.</p>
+
+			<p>Sie könnten Ihre privaten Schlüssel des alten Clients importieren, dafür müssen Sie jedoch ein Backup der alten Keys aufbewahren, da diese NICHT Teil des Electrum-Seeds werden.</p>
+
+            <hr>
+
+            <h4 id="switching-wallets">Wechseln, Erstellen oder Wiederherstellen mehrerer Geldbörsen</h4>
+
+            <p>Es könnte sein, dass Sie eine andere Geldbörse öffnen oder wiederherstellen möchten. Dies ist möglich durch Start von Electrum über die Befehlszeile mit Angabe der zu öffnenden Geldbörse. Wenn diese noch nicht existiert, so wird sie erstellt oder wiederhergestellt.</p>
+
+            <p>Beispiel (für OSX):</p>
+
+<pre>cd /Applications/Electrum.app/Contents/MacOS
+./Electrum -w ~/path/to/your-new-wallet-file</pre>
+
+            <p>Um zu ihrer Standard-Geldbörse zurückzukehren starten Sie Electrum ohne <code>-w</code> Parameter (Oder einfach über das Programm-Icon starten).</p>
+
+<pre>cd /Applications/Electrum.app/Contents/MacOS
+./Electrum</pre>
+
+			<p>Sobald mehrere Geldbörsen existieren können Sie zwischen diesen über "Datei" -> "Geldbörse Öffnen" wechseln.</p>
+
+		</section><!-- /container -->
+	</body>
+</html>
