@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang=de>
+	<head>
+		<title>Electrum Bitcoin Client</title>
+		
+		<meta charset=utf-8 />
+		<meta name=description content="Lightweight Bitcoin Client" />
+		<meta name=keywords content="electrum,bitcoin,blockchain,lightweight,instant" />
+		<!--<meta name=viewport content="width=device-width, initial-scale=1.0" />-->
+		
+		<!--[if lt IE 9]>
+		<script type="text/javascript" src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+		
+		<!-- Styles -->
+		<link rel="stylesheet" type="text/css" href="../css/screen.css" />
+		<!-- /Styles -->
+
+		<!-- Links -->
+		<link rel="shortcut icon" href="favicon.ico" />
+		<link rel=apple-touch-icon-precomposed href=.png />
+		<link rel=author type=text/plain href=../humans.txt>
+		<!-- /Links -->
+		
+		<!-- Analytics -->
+		
+		<!-- /Analytics -->
+			
+		<!-- js -->
+		<script src=https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js></script>
+		<script>
+		$(document).ready(function(){
+			$('#translations').load('../langs_nav.html #langs_subdir');
+			$('#nav').load('../langs_nav.html #nav_de');
+		});
+		$(window).bind("load", function() {
+		   $('a[href="../de"]').removeAttr('href');
+		});
+		</script>
+		<!-- /js -->
+	</head>
+
+	<body>
+
+		<header>
+		    <div class="container">
+		    	<nav id=translations>
+			    	<!-- langs -->
+			    </nav>
+				<nav id=nav>
+					<!-- nav -->
+					<!-- DON'T MODIFY for translations, use 'langs_nav.html' as explained in the README file -->
+					<ul id=nav_en class=nav>
+						<li><a href="index.html">Home</a></li>
+						<li><a href="../download.html">Download</a></li>
+						<li><a href="documentation.html">Documentation</a></li>
+						<li><a href="community.html">Community</a></li>
+					</ul>
+					<!-- /DON'T MODIFY end -->
+				</nav>
+				<div class=header>
+					<i id=electrum_logo><img src="../media/electrum_logo.png" alt="Electrum" border="none" width="70" align="top" /></i>
+					<div id=logo><span><h1>Electrum</h1></span></div>
+					<h2>Lightweight Bitcoin Client</h2>
+				</div>
+		    </div>
+		</header>
+
+		<section class="container">
+			
+			<h2>Electrum für Android</h2>
+			
+			<p>Diese Seite erklärt die Installation von Electrum auf Android-Geräten.<br /></p> 
+			
+			<p>Beachten Sie bitte, dass Electrum nicht als Paket, sondern als Python-Quellcode verteilt wird. Die Installation ist daher geringfügig komplizierter als ein App aus dem Play Store herunterzuladen.<br /></p>
+			
+			<p>Es ist aber möglich, alles über QR-Codes zu installieren. Bei Schwierigkeiten können Sie unter <a href="http://maketecheasier.com/install-applications-without-the-market/2011/01/28">diesem Link</a> Hilfe suchen..</p>
+			
+			
+			<h3>1. Google Scripting Layer für Android installieren</h3>
+			
+			<p>Gibt es <a href="http://code.google.com/p/android-scripting/wiki/Unofficial">hier</a>, oder den folgenden QR-Code einscannen:
+			<br /><br />
+			<img src="http://chart.apis.google.com/chart?cht=qr&chs=150x150&chld=L&choe=UTF-8&chl=http%3A%2F%2Fwww.mithril.com.au%2Fandroid%2Fsl4a_r5x.apk"
+			/></p>
+			
+			<h3>2. Python für Android installieren</h3>
+			
+			<p>Gibt es <a href="http://code.google.com/p/python-for-android/downloads/detail?name=PythonForAndroid_r5.apk">hier</a>, oder den folgenden QR-Code einscannen: 
+<br /><br /><img src="http://chart.apis.google.com/chart?cht=qr&chs=200x200&chld=L&choe=UTF-8&chl=http%3A%2F%2Fpython-for-android.googlecode.com%2Ffiles%2FPythonForAndroid_r5.apk"/><br /><br />
+Sobald das APK installiert ist, starten Sie "Python für Android" und klicken "installieren".</p>
+			
+			<h3>3. Electrum-Installationsskript herunterladen</h3>
+			
+			<pre>
+1. SL4A starten
+2. Menü-Button drücken
+3. "Add" antippen
+4. "Scan Barcode" antippen
+5. Den folgenden QR-Code scannen:</pre>
+
+			<img src="http://chart.apis.google.com/chart?cht=qr&chs=300x300&chld=L&choe=UTF-8&chl=e4a_install.py%0Aimport+urllib%2C+zipfile%2C+os%0Ap%3D%22http%3A%2F%2Fdownload.electrum.org%2Fdownload%2Fe4a-181zip%22%0An%3D%22e4a-1.8.1%22%0Anz%3Dn%2B%22.zip%22%0Aurllib.urlretrieve(p%2Cnz)%0Azipfile.ZipFile(nz).extractall()%0Aos.rename(n%2C'scripts%2F'%2Bn)" />
+			<br /><br />
+			<p>Dies installiert ein Skript namens e4a_install.py</p>
+			
+			<h3>4. Electrum laden und installieren</h3>
+			
+			<pre>
+1. e4a_install.py antippen: dies lädt und installiert ein Verzeichnis namens "e4a-1.8.1"
+2. Um Electrum zu starten, dieses Verzeichnis öffnen und "e4a.py" antippen</pre>
+			
+			<h3>5. Einen Shortcut auf dem Homescreen einrichten</h3>
+			
+			<pre>
+1. Zum Homescreen gehen, "Menü" anklicken and "Zu Homescreen hinzufügen" auswählen.
+2. Im angezeigten Menü "Verknüpfung" auswählen, dann "Skripte"
+3. Zum e4a.py-Skript navigieren.</pre>
+					
+		</section><!-- /container -->
+	</body>
+</html>

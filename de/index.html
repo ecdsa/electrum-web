@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang=de>
+	<head>
+		<title>Electrum Bitcoin Client</title>
+		
+		<meta charset=utf-8 />
+		<meta name=description content="Lightweight Bitcoin Client" />
+		<meta name=keywords content="electrum,bitcoin,blockchain,lightweight,instant" />
+		<!--<meta name=viewport content="width=device-width, initial-scale=1.0" />-->
+		
+		<!--[if lt IE 9]>
+		<script type="text/javascript" src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+		
+		<!-- Styles -->
+		<link rel="stylesheet" type="text/css" href="../css/screen.css" />
+		<!-- /Styles -->
+
+		<!-- Links -->
+		<link rel="shortcut icon" href="favicon.ico" />
+		<link rel=apple-touch-icon-precomposed href=.png />
+		<link rel=author type=text/plain href=../humans.txt>
+		<!-- /Links -->
+		
+		<!-- Analytics -->
+		
+		<!-- /Analytics -->
+			
+		<!-- js -->
+		<script src=https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js></script>
+		<script>
+		$(document).ready(function(){
+			$('#translations').load('../langs_nav.html #langs_subdir');
+			$('#nav').load('../langs_nav.html #nav_de');
+		});
+		$(window).bind("load", function() {
+		   $('a[href="../de"]').removeAttr('href');
+		});
+		</script>
+		<!-- /js -->
+	</head>
+
+	<body>
+	
+	<!--<div class="alert"><p><span class="info-icon"></span><small>alert message <a href="#" target="_blank"><em>read more</em></a></small></p></div>-->
+	
+	<header>
+	    <div class="container">
+	    	<nav id=translations>
+		    	<!-- langs -->
+		    </nav>
+			<nav id=nav>
+				<!-- nav -->
+				<!-- DON'T MODIFY for translations, use 'langs_nav.html' as explained in the README file -->
+				<ul id=nav_en class=nav>
+					<li><a href="index.html">Home</a></li>
+					<li><a href="../download.html">Download</a></li>
+					<li><a href="documentation.html">Documentation</a></li>
+					<li><a href="community.html">Community</a></li>
+				</ul>
+				<!-- /DON'T MODIFY end -->
+			</nav>
+			<div class=header>
+				<i id=electrum_logo><img src="../media/electrum_logo.png" alt="Electrum" border="none" width="70" align="top" /></i>
+				<div id=logo><span><h1>Electrum</h1></span></div>
+				<h2>Lightweight Bitcoin Client</h2>
+			</div>
+	    </div>
+	</header>
+
+		<section class="container">
+			
+			<figure style="text-align:center;"><img src="../media/splash_electrum_gui.png" alt="Electrum" border="none"/></figure>
+			
+			<br />
+			
+			<p style="margin:0 auto; padding:0 100px; text-align:center;">Electrum ist ein einfach zu bedienender Bitcoin-Client. Er schützt Ihre Bitcoins vor Datenverlust, da Ihre Geldbörse aus einer geheimen Wortfolge wiederhergestellt werden kann, die Sie aufschreiben oder auswendig lernen können. Electrum startet sofort, da keine Kopie der Blockchain heruntergeladen wird.</p>
+			
+			<br />
+			
+			<p style="text-align:center;"><a href="#features" class="button">Warum Electrum?</a></p>
+			
+			<br /><br />
+			
+			<h3 id="features">Features:</h3>
+			
+			<ul>
+				<li>Sofort Einsatzbereit: Electrum benötigt keine lokale Kopie der Blockchain, diese liegt auf externen Servern.</li>
+				<li>Fehlertolerant: Ihre Geldbörse kann aus Ihren geheimen Startwerten (<a href="seed.html">Seed</a>) wiederhergestellt werden.</li>
+				<li>Sicher: Ihr Seed und private Schlüssel werden nie zum Server geschickt. Vom Server empfangene Daten werden mittels <a href="https://en.bitcoin.it/wiki/Thin_Client_Security#Header-Only_Clients" target="_blank">SPV</a> verifiziert. </li>
+				<li>Keine Ausfälle: Mehrere öffentliche Server stellen sicher, dass Electrum durchgängig funktioniert.</li>
+				<li>Universell: Sie können die selbe Geldbörse auf mehreren Geräten verwenden,  sie wird automatisch synchronisiert.</li>
+				<li>Offen: Private Schlüssel können in andere Clients importiert werden.</li>
+				<li>Geprüft und getestet: Electrum ist Open Source und existiert seit November 2011.</li>
+			</ul>
+			
+			<br />
+			
+			<h3>Benutzeroberflächen</h3>
+			
+			<p>Electrum hat mehrere Oberflächen, die auf dem selben zugrundeliegenden Code basieren: Classic (Qt), Lite, Gtk, Android, Text (mittels curses). Beispiele finden Sie unter <a href="screenshots.html">Screenshots</a>.</p>
+
+		</section><!-- /container -->
+	</body>
+</html>
