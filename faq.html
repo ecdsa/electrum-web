@@ -67,16 +67,21 @@
 
 			<h3>Frequently Asked Questions<span class=hidden> FAQs</span></h3>
 			                        
-            <ul class="links-list"><div>
+            <ul class="links-list">
+            <div>
                 <li><a href="#how-does-Electrum-work">How does Electrum work?</a></li>
                 <li><a href="#seed">What is the Seed?</a></li>
+                <li><a href="#gap-limit">What is the gap limit?</a></li>
+                <li><a href="#freeze-address">What does it mean to "Freeze" an address in Electrum?</a></li>
                 <li><a href="#wallet-encryption">What encryption is used for wallets?</a></li>
+                <li><a href="#cold-wallet-support">Does Electrum support cold wallets?</a></li>
+                <li><a href="#import-address">Can I import addresses from other Bitcoin clients?</a></li>
+                <li><a href="#wallet-file">Where is my wallet file located?</a></li>
                 <li><a href="#csv-bulk-payments">Can I do bulk payments with Electrum?</a></li>
                 <li><a href="#sending-to-P2SH-addresses">Does Electrum support sending to multi-signature addresses?</a></li>
                 <li><a href="#create-sign-raw-txs">Can Electrum create and sign raw transactions?</a></li>
-                <li><a href="#cold-wallet-support">Does Electrum support cold wallets?</a></li>
-                
-            </div></ul>
+            </div>
+            </ul>
             
             <hr>
             
@@ -85,11 +90,47 @@
                 <dd>Electrum's focus is speed, with low resource usage and simplifying Bitcoin. Startup times are instant because it operates in conjunction with high-performance servers that handle the most complicated parts of the Bitcoin system.</dd>
                 
                 <dt id="seed"><h4>What is the Seed?</h4></dt>
-                <dd>The Electrum Bitcoin client uses a 128-bits random seed to generate its private keys. The seed can be represented as a 12-words mnemonic code. You do not need to perform regular backups, because your wallet can be recovered from the seed that you can memorize or write on paper.</dd>
+                <dd>Electrum uses a 128-bits random seed to generate your private keys. The seed can be represented as a 12-words mnemonic code. You do not need to perform regular backups, because your wallet can be recovered from the seed that you can memorize or write on paper.
+                
+                <br /><br />
+                Example:
+<pre>hexadecimal: 431a62f1c86555d3c45e5c4d9e10c8c7
+mnemonic: "constant forest adore false green weave stop guy fur freeze giggle clock"</pre>
+
+                There are 2<sup>128</sup> possible seeds for a deterministic wallet in Electrum. For comparison, the total number of Bitcoin addresses is 2<sup>160</sup> and the number of atoms in the universe is 2<sup>166</sup>.</dd>
+                
+                <dt id="gap-limit"><h4>What is the gap limit?</h4></dt>
+                <dd>The gap limit is the maximun number of unused addresses in your deterministic sequence of addresses. Electrum uses a gap limit to stop looking for addresses, it is set to 5 by default, so the client get all addresses until 5 unused addresses are found.</dd>
+                
+                <dt id="freeze-address"><h4>What does it mean to "Freeze" an address in Electrum?</h4></dt>
+                <dd>When you freeze an address, the funds in that address will not be used for sending bitcoins. You can not send Bitcoins if you don't have enough funds in the non-frozen addresses.</dd>
                 
                 <dt id="wallet-encryption"><h4>What encryption is used for wallets?</h4></dt>
                 <dd>Electrum uses AES-256-CBC to encrypt the seed and private keys in the wallet.</dd>
-                                            
+                
+                <dt id="cold-wallet-support"><h4>Does Electrum support cold wallets?</h4></dt>
+                <dd>Yes. It also supports an easy and safe way to spend your coins in cold storage from an online computer using the Master Public Key.</dd>
+                
+                <dt id="import-address"><h4>Can I import addresses from other Bitcoin clients?</h4></dt>
+                <dd>Yes, you could import the private keys from other clients, but you will have to keep a backup of those keys separately as they won't become part of your Electrum seed.</dd>
+                
+                <dt id="wallet-file"><h4>Where is my wallet file located?</h4></dt>
+                <dd>The default wallet file is called default_wallet which is created when you first run the application and located under the /wallets folder.
+                
+                <br /><br />
+                On Windows
+                
+<pre>Show hidden files
+Go to \Users\YourUserName\AppData\Roaming\Local\Electrum</pre>
+                
+                On Mac
+<pre>Open Finder
+Go > Go to folder (shift+cmd+G) and type ~/.electrum</pre>
+                
+                On Linux
+<pre>Home Folder
+Go > Location and type ~/.electrum</pre></dd>
+                              
                 <dt id="csv-bulk-payments"><h4>Can I do bulk payments with Electrum?</h4></dt>
                 <dd>You can use the CSV import feature to make bulk payments. It can accept either a CSV file or CSV entered into a text box. The rough format is:
 <pre>"ADDRESS","AMOUNT"
@@ -100,9 +141,7 @@
                 
                 <dt id="create-sign-raw-txs"><h4>Can Electrum create and sign raw transactions?</h4></dt>
 				<dd>Electrum lets you create and sign raw transactions right from the user interface using a form.</dd>
-                
-                <dt id="cold-wallet-support"><h4>Does Electrum support cold wallets?</h4></dt>
-                <dd>Yes. It also supports an easy and safe way to spend your coins in cold storage from an online computer.</dd>
+				
             </dl>
 
 		</section><!-- /container -->
