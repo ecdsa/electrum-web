@@ -409,9 +409,16 @@ h3 {
     margin:0px 0px;
 }
 
+.hidden { position:absolute; top:100%; left:-99999px; }
+
 a, a:visited { text-decoration:none; }
 a:hover, a:active, a:focus { text-decoration:underline; }
 a:active { position:relative; top:1px; }
+
+small { font-size:.9375rem; }
+
+dt { padding-top:10px; } dt h4 { margin-bottom:5px; }
+dd { padding-bottom:20px; }
 
 body { padding-bottom:10px; background-color:#ddd; }
 
@@ -502,4 +509,8 @@ hr + h4 { padding-top:20px; }
 	.alert a:hover, .alert a:active, .alert a:focus { color:#fff; text-decoration:underline; }
 		.button:active { position:relative; top:1px; }
 
-small { font-size:.9375rem; }
+.links-list {
+	max-height:110px;
+	overflow:scroll;
+	}
+	.links-list div { padding-bottom:20px; overflow:hidden; }
