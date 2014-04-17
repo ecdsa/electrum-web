@@ -173,7 +173,7 @@ git clone git://github.com/spesmilo/electrum.git</pre>
 		
 		<p>Compile the icons</p>
 		<pre>
-pyrcc4 icons.qrc -o gui/icons_rc.py</pre>
+pyrcc4 icons.qrc -o gui/qt/icons_rc.py</pre>
 		<p>Create translations</p>
 		<pre>
 python mki18n.py</pre>
