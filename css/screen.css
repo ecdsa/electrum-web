@@ -362,7 +362,7 @@ header {
   background: linear-gradient(#555555, #000000, #000000); /* For Safari 5.1 to 6.0 */
 }
 
-header a, a:visited {
+header a, header a:visited {
   text-decoration: none;
   color: #ffffff;
   visited-color: #cccccc;
