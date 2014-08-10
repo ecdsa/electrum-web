@@ -443,7 +443,7 @@ header nav {
 		display:block;
 		background:url(../media/electrum_text.png) no-repeat 0 0;
 		background-image: -webkit-image-set( url(../media/electrum_text.png) 1x, url(../media/electrum_text.png) 2x);
-		background-size:300px 45px;
+		background-size:300px 42px;
 		}
 		#logo span, #electrum_logo img { position:absolute; top:100%; left:-99999px; }
 	
